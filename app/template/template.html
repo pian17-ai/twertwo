@@ -1,0 +1,1131 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="id"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Twertwo - XII RPL 2 SMKN 64 JAKARTA | Official Portfolio</title>
+<!-- Tailwind CSS CDN -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Google Fonts: Space Grotesk & Plus Jakarta Sans -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&amp;family=Space+Grotesk:wght@500;700;800&amp;family=JetBrains+Mono:wght@500;700&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind Custom Configuration -->
+<script data-purpose="tailwind-config">
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              cream: '#FBF8F1',
+              yellow: '#FDE047',
+              pink: '#F472B6',
+              peach: '#FB923C',
+              cyan: '#38BDF8',
+              purple: '#A855F7',
+              green: '#4ADE80',
+              dark: '#121212',
+            }
+          },
+          fontFamily: {
+            display: ['"Space Grotesk"', 'sans-serif'],
+            body: ['"Plus Jakarta Sans"', 'sans-serif'],
+            mono: ['"JetBrains Mono"', 'monospace'],
+          },
+          boxShadow: {
+            'brutal-sm': '2px 2px 0px #121212',
+            'brutal': '4px 4px 0px #121212',
+            'brutal-lg': '6px 6px 0px #121212',
+            'brutal-xl': '8px 8px 0px #121212',
+          }
+        }
+      }
+    }
+  </script>
+<!-- Neo-brutalist Global Styles -->
+<style data-purpose="custom-styling">
+    body {
+      background-color: #FAF7F2;
+      color: #121212;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+    }
+    
+    .font-display {
+      font-family: 'Space Grotesk', sans-serif;
+    }
+
+    .font-mono-code {
+      font-family: 'JetBrains Mono', monospace;
+    }
+
+    /* Dot grid background texture for neo-brutalist feel */
+    .bg-dot-pattern {
+      background-image: radial-gradient(#121212 1px, transparent 1px);
+      background-size: 20px 20px;
+    }
+
+    .bg-grid-soft {
+      background-size: 24px 24px;
+      background-image: linear-gradient(to right, rgba(0, 0, 0, 0.05) 1px, transparent 1px),
+                        linear-gradient(to bottom, rgba(0, 0, 0, 0.05) 1px, transparent 1px);
+    }
+
+    /* Button press simulation */
+    .btn-brutal {
+      transition: all 0.15s ease-in-out;
+    }
+    .btn-brutal:hover {
+      transform: translate(-2px, -2px);
+      box-shadow: 6px 6px 0px #121212;
+    }
+    .btn-brutal:active {
+      transform: translate(2px, 2px);
+      box-shadow: 2px 2px 0px #121212;
+    }
+
+    /* Modal Backdrop Blur */
+    .modal-backdrop {
+      backdrop-filter: blur(8px);
+      background-color: rgba(18, 18, 18, 0.65);
+    }
+  </style>
+</head>
+<body class="selection:bg-brand-yellow selection:text-black antialiased relative min-h-screen">
+<!-- BEGIN: TopNavigationBar -->
+<header class="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b-2 border-brand-dark transition-all">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+<!-- Brand Logo -->
+<a class="flex items-center gap-3 group" href="#hero" title="Twertwo - XII RPL 2">
+<div class="w-12 h-12 bg-brand-yellow border-2 border-brand-dark rounded-xl flex items-center justify-center font-display font-extrabold text-2xl shadow-brutal-sm group-hover:rotate-6 transition-transform">
+          T2
+        </div>
+<div class="flex flex-col">
+<div class="flex items-center gap-2">
+<span class="font-display font-black text-xl tracking-tight">TWERTWO</span>
+<span class="font-mono-code text-[11px] bg-brand-purple text-white px-1.5 py-0.5 rounded font-bold border border-brand-dark">&lt;/&gt;</span>
+</div>
+<span class="text-xs font-bold text-gray-600 uppercase tracking-wider">XII RPL 2 • SMKN 64 JKT</span>
+</div>
+</a>
+<!-- Desktop Nav Items -->
+<nav class="hidden md:flex items-center gap-1 lg:gap-2 font-display font-bold text-sm" data-purpose="nav-links">
+<a class="px-3 py-2 rounded-lg hover:bg-gray-100 hover:text-black border-2 border-transparent hover:border-brand-dark transition-all" href="#hero">Home</a>
+<a class="px-3 py-2 rounded-lg hover:bg-brand-yellow hover:text-black border-2 border-transparent hover:border-brand-dark transition-all" href="#about-rpl">About RPL</a>
+<a class="px-3 py-2 rounded-lg hover:bg-brand-cyan hover:text-black border-2 border-transparent hover:border-brand-dark transition-all" href="#about-twertwo">About Twertwo</a>
+<a class="px-3 py-2 rounded-lg hover:bg-brand-green hover:text-black border-2 border-transparent hover:border-brand-dark transition-all" href="#students">Students</a>
+<a class="px-3 py-2 rounded-lg hover:bg-brand-purple hover:text-black border-2 border-transparent hover:border-brand-dark transition-all" href="#projects">Projects</a><a class="px-3 py-2 rounded-lg hover:bg-brand-pink hover:text-black border-2 border-transparent hover:border-brand-dark transition-all" href="#achievements">Achievements</a>
+</nav>
+<!-- Social Media Pills -->
+<div class="hidden lg:flex items-center gap-2">
+<a class="w-9 h-9 rounded-full bg-emerald-400 border-2 border-brand-dark flex items-center justify-center shadow-brutal-sm hover:scale-110 transition-transform" href="https://spotify.com" rel="noreferrer" target="_blank" title="Spotify Playlist">
+<svg class="w-5 h-5 text-black" fill="currentColor" viewbox="0 0 24 24"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z"></path></svg>
+</a>
+<a class="w-9 h-9 rounded-full bg-rose-400 border-2 border-brand-dark flex items-center justify-center shadow-brutal-sm hover:scale-110 transition-transform" href="https://instagram.com" rel="noreferrer" target="_blank" title="Instagram">
+<svg class="w-5 h-5 text-black" fill="currentColor" viewbox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"></path></svg>
+</a>
+<a class="w-9 h-9 rounded-full bg-amber-300 border-2 border-brand-dark flex items-center justify-center shadow-brutal-sm hover:scale-110 transition-transform" href="https://github.com" rel="noreferrer" target="_blank" title="Class GitHub">
+<svg class="w-5 h-5 text-black" fill="currentColor" viewbox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"></path></svg>
+</a>
+</div>
+<!-- Quick Action / Badge -->
+<div class="flex items-center gap-3">
+<span class="inline-flex items-center gap-1.5 font-mono-code text-xs font-bold px-3 py-1.5 bg-brand-green/30 border-2 border-brand-dark rounded-full">
+<span class="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse"></span>
+          SMKN 64 JKT
+        </span>
+</div>
+</div>
+</header>
+<!-- END: TopNavigationBar -->
+<!-- BEGIN: Section1Hero -->
+<section class="relative overflow-hidden py-16 lg:py-24 border-b-2 border-brand-dark bg-dot-pattern" data-purpose="hero-section" id="hero">
+<!-- Decorative Floating Stickers -->
+<div class="absolute -top-6 -right-6 w-32 h-32 bg-brand-yellow/30 rounded-full blur-2xl pointer-events-none"></div>
+<div class="absolute top-1/2 -left-10 w-40 h-40 bg-brand-pink/20 rounded-full blur-3xl pointer-events-none"></div>
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center flex flex-col items-center">
+<!-- Upper Pill Tag -->
+<div class="inline-flex items-center gap-2 px-4 py-1.5 bg-white border-2 border-brand-dark rounded-full shadow-brutal-sm mb-8 transform -rotate-1">
+<span class="font-mono-code text-xs font-bold text-rose-500">✨ XII RPL 2 EDITION</span>
+<span class="text-xs text-gray-400">•</span>
+<span class="font-mono-code text-xs font-bold text-gray-800">CLASS OF 2025</span>
+</div>
+<!-- Main Headline inspired by Original reference -->
+<div class="max-w-4xl mx-auto">
+<h1 class="text-4xl sm:text-6xl lg:text-7xl font-display font-extrabold tracking-tight text-brand-dark leading-none">
+          Where <span class="inline-block px-3 py-1 bg-rose-400 text-white border-3 border-brand-dark rounded-xl shadow-brutal -rotate-2 transform hover:rotate-0 transition-transform">Cool</span> Kids
+        </h1>
+<div class="mt-4 flex flex-wrap items-center justify-center gap-3 sm:gap-4">
+<span class="text-4xl sm:text-6xl lg:text-7xl font-display font-black tracking-tight">Hang Out</span>
+<div class="inline-flex items-center justify-center p-3 bg-brand-yellow border-2 border-brand-dark rounded-2xl shadow-brutal rotate-3 hover:rotate-6 transition-transform">
+<svg class="w-8 h-8 sm:w-11 h-11 text-brand-dark" fill="none" stroke="currentColor" stroke-width="2.5" viewbox="0 0 24 24">
+<path d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</div>
+</div>
+</div>
+<!-- Subtitle -->
+<p class="mt-8 text-lg sm:text-xl font-medium text-gray-700 max-w-2xl text-center italic">
+        "Welcome to Twertwo — The Official Digital Headquarters &amp; Yearbook of XII RPL 2 at SMKN 64 JAKARTA."
+      </p>
+<!-- Neo-Brutalist Main CTA Pill (Matching About Us style from Reference) -->
+<div class="mt-8 flex flex-col sm:flex-row items-center gap-4">
+<a class="btn-brutal inline-flex items-center gap-3 px-8 py-3.5 bg-brand-purple text-white font-display font-extrabold text-lg rounded-full border-2 border-brand-dark shadow-brutal" href="#about-twertwo">
+<span>About</span>
+<span class="inline-flex items-center px-2 py-0.5 bg-brand-cyan text-black border border-brand-dark rounded text-sm font-black">Us</span>
+<span class="w-7 h-7 bg-brand-peach border border-brand-dark rounded-full flex items-center justify-center text-black">
+            ➔
+          </span>
+</a>
+<a class="btn-brutal inline-flex items-center gap-2 px-7 py-3.5 bg-brand-yellow text-brand-dark font-display font-extrabold text-lg rounded-full border-2 border-brand-dark shadow-brutal" href="#students">
+<span>Meet The Squad</span>
+<span class="w-6 h-6 rounded-full bg-brand-dark text-white text-xs flex items-center justify-center">36</span>
+</a>
+</div>
+<!-- Terminal / Tech Badge Strip -->
+<div class="mt-12 w-full max-w-2xl bg-white border-2 border-brand-dark rounded-2xl p-4 shadow-brutal text-left">
+<div class="flex items-center justify-between pb-3 border-b-2 border-gray-100">
+<div class="flex items-center gap-2">
+<span class="w-3 h-3 rounded-full bg-rose-400 border border-brand-dark"></span>
+<span class="w-3 h-3 rounded-full bg-amber-400 border border-brand-dark"></span>
+<span class="w-3 h-3 rounded-full bg-emerald-400 border border-brand-dark"></span>
+<span class="ml-2 font-mono-code text-xs font-bold text-gray-500">twertwo@smkn64-bash ~</span>
+</div>
+<span class="font-mono-code text-xs text-purple-600 font-bold">git:(main)</span>
+</div>
+<div class="pt-3 font-mono-code text-xs sm:text-sm text-gray-800 space-y-1">
+<p><span class="text-emerald-600 font-bold">$</span> git commit -m "Growing up together, debugging forever."</p>
+<p class="text-gray-500">[main a8f9c12] 36 future software engineers loaded with high ambition.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- END: Section1Hero -->
+<!-- BEGIN: Section2AboutRPL -->
+<section class="py-20 bg-brand-cream border-b-2 border-brand-dark" data-purpose="curriculum-overview" id="about-rpl">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<!-- Section Header -->
+<div class="text-center max-w-3xl mx-auto mb-16">
+<div class="inline-block px-4 py-1.5 bg-brand-cyan border-2 border-brand-dark rounded-lg shadow-brutal-sm font-display font-extrabold text-xs uppercase tracking-widest mb-4">
+          SECTION 02 // CURRICULUM &amp; PASSION
+        </div>
+<h2 class="text-3xl sm:text-5xl font-display font-black tracking-tight text-brand-dark">
+          What is Rekayasa Perangkat Lunak (RPL)?
+        </h2>
+<p class="mt-4 text-base sm:text-lg text-gray-700 font-medium">
+          RPL (Software Engineering) di SMKN 64 Jakarta bukan sekadar menulis baris kode. Kami dilatih merancang arsitektur sistem, memecahkan permasalahan nyata, dan membangun produk digital kelas industri.
+        </p>
+</div>
+<!-- 4 Pillars Neo-Brutalist Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+<!-- Card 1: Web Development -->
+<div class="bg-white border-2 border-brand-dark rounded-2xl p-6 shadow-brutal flex flex-col justify-between hover:-translate-y-1 transition-transform">
+<div>
+<div class="w-12 h-12 rounded-xl bg-brand-yellow border-2 border-brand-dark flex items-center justify-center font-display font-black text-xl shadow-brutal-sm mb-4">
+              🌐
+            </div>
+<h3 class="font-display font-bold text-xl mb-2 text-brand-dark">Frontend Sorcery</h3>
+<p class="text-sm text-gray-600 mb-4 leading-relaxed">
+              Mengubah ide desain menjadi website interaktif, responsif, dan kilat menggunakan React, Tailwind CSS, HTML5, serta JavaScript modern.
+            </p>
+</div>
+<div class="pt-4 border-t-2 border-gray-100 flex flex-wrap gap-1.5">
+<span class="text-[11px] font-mono-code font-bold bg-amber-100 border border-brand-dark px-2 py-0.5 rounded">React.js</span>
+<span class="text-[11px] font-mono-code font-bold bg-sky-100 border border-brand-dark px-2 py-0.5 rounded">Tailwind</span>
+<span class="text-[11px] font-mono-code font-bold bg-emerald-100 border border-brand-dark px-2 py-0.5 rounded">Vite</span>
+</div>
+</div>
+<!-- Card 2: Backend Engines -->
+<div class="bg-white border-2 border-brand-dark rounded-2xl p-6 shadow-brutal flex flex-col justify-between hover:-translate-y-1 transition-transform">
+<div>
+<div class="w-12 h-12 rounded-xl bg-brand-pink border-2 border-brand-dark flex items-center justify-center font-display font-black text-xl shadow-brutal-sm mb-4 text-white">
+              ⚙️
+            </div>
+<h3 class="font-display font-bold text-xl mb-2 text-brand-dark">Backend &amp; Data</h3>
+<p class="text-sm text-gray-600 mb-4 leading-relaxed">
+              Membangun fondasi logika kokoh, RESTful API andal, keamanan autentikasi, serta manajemen database terstruktur MySQL &amp; PostgreSQL.
+            </p>
+</div>
+<div class="pt-4 border-t-2 border-gray-100 flex flex-wrap gap-1.5">
+<span class="text-[11px] font-mono-code font-bold bg-pink-100 border border-brand-dark px-2 py-0.5 rounded">Node.js</span>
+<span class="text-[11px] font-mono-code font-bold bg-purple-100 border border-brand-dark px-2 py-0.5 rounded">Laravel</span>
+<span class="text-[11px] font-mono-code font-bold bg-orange-100 border border-brand-dark px-2 py-0.5 rounded">SQL</span>
+</div>
+</div>
+<!-- Card 3: Mobile Apps -->
+<div class="bg-white border-2 border-brand-dark rounded-2xl p-6 shadow-brutal flex flex-col justify-between hover:-translate-y-1 transition-transform">
+<div>
+<div class="w-12 h-12 rounded-xl bg-brand-cyan border-2 border-brand-dark flex items-center justify-center font-display font-black text-xl shadow-brutal-sm mb-4">
+              📱
+            </div>
+<h3 class="font-display font-bold text-xl mb-2 text-brand-dark">Mobile Ecosystem</h3>
+<p class="text-sm text-gray-600 mb-4 leading-relaxed">
+              Menciptakan aplikasi multi-platform yang mulus dan adaptif untuk Android dan iOS menggunakan Flutter, Kotlin, dan integrasi API mobile.
+            </p>
+</div>
+<div class="pt-4 border-t-2 border-gray-100 flex flex-wrap gap-1.5">
+<span class="text-[11px] font-mono-code font-bold bg-cyan-100 border border-brand-dark px-2 py-0.5 rounded">Flutter</span>
+<span class="text-[11px] font-mono-code font-bold bg-blue-100 border border-brand-dark px-2 py-0.5 rounded">Dart</span>
+<span class="text-[11px] font-mono-code font-bold bg-rose-100 border border-brand-dark px-2 py-0.5 rounded">Firebase</span>
+</div>
+</div>
+<!-- Card 4: Agile Collaboration -->
+<div class="bg-white border-2 border-brand-dark rounded-2xl p-6 shadow-brutal flex flex-col justify-between hover:-translate-y-1 transition-transform">
+<div>
+<div class="w-12 h-12 rounded-xl bg-brand-green border-2 border-brand-dark flex items-center justify-center font-display font-black text-xl shadow-brutal-sm mb-4">
+              🤝
+            </div>
+<h3 class="font-display font-bold text-xl mb-2 text-brand-dark">Agile &amp; Teamwork</h3>
+<p class="text-sm text-gray-600 mb-4 leading-relaxed">
+              Memahami alur kerja tim modern dengan Git Version Control, Scrum sprints, standup harian, dan kolaborasi kode antar rekan sejawat.
+            </p>
+</div>
+<div class="pt-4 border-t-2 border-gray-100 flex flex-wrap gap-1.5">
+<span class="text-[11px] font-mono-code font-bold bg-green-100 border border-brand-dark px-2 py-0.5 rounded">Gitflow</span>
+<span class="text-[11px] font-mono-code font-bold bg-amber-100 border border-brand-dark px-2 py-0.5 rounded">Scrum</span>
+<span class="text-[11px] font-mono-code font-bold bg-sky-100 border border-brand-dark px-2 py-0.5 rounded">Figma</span>
+</div>
+</div>
+</div>
+<!-- Interactive Code Snippet Mockup -->
+<div class="mt-12 bg-gray-900 border-2 border-brand-dark rounded-2xl shadow-brutal-lg overflow-hidden max-w-4xl mx-auto">
+<div class="bg-gray-800 px-4 py-3 flex items-center justify-between border-b-2 border-gray-700">
+<div class="flex items-center gap-2">
+<span class="w-3 h-3 rounded-full bg-red-500"></span>
+<span class="w-3 h-3 rounded-full bg-yellow-400"></span>
+<span class="w-3 h-3 rounded-full bg-green-500"></span>
+<span class="font-mono-code text-xs text-gray-400 ml-2">TwertwoClassManifest.js</span>
+</div>
+<span class="font-mono-code text-xs font-bold text-emerald-400">✔ Ready to Build</span>
+</div>
+<div class="p-6 font-mono-code text-xs sm:text-sm text-gray-200 overflow-x-auto leading-relaxed">
+<p><span class="text-purple-400">const</span> <span class="text-yellow-300">twertwoClass</span> = {</p>
+<p class="pl-4"><span class="text-sky-300">name</span>: <span class="text-emerald-300">"XII Rekayasa Perangkat Lunak 2"</span>,</p>
+<p class="pl-4"><span class="text-sky-300">school</span>: <span class="text-emerald-300">"SMKN 64 JAKARTA"</span>,</p>
+<p class="pl-4"><span class="text-sky-300">totalMembers</span>: <span class="text-amber-400">36</span>,</p>
+<p class="pl-4"><span class="text-sky-300">dailyMood</span>: <span class="text-emerald-300">"Compile error? Santai dulu, solve bareng-bareng!"</span>,</p>
+<p class="pl-4"><span class="text-sky-300">mission</span>: <span class="text-purple-400">function</span>() {</p>
+<p class="pl-8"><span class="text-pink-400">return</span> <span class="text-emerald-300">"To craft impactful digital solutions for Indonesia"</span>;</p>
+<p class="pl-4">}</p>
+<p>};</p>
+<p class="text-gray-500 mt-2">// Output: Future Tech Leaders from SMKN 64 Jakarta 🚀</p>
+</div>
+</div>
+</div>
+</section>
+<!-- END: Section2AboutRPL -->
+<!-- BEGIN: Section3AboutTwertwo -->
+<section class="py-20 bg-sky-100 border-b-2 border-brand-dark bg-grid-soft" data-purpose="class-identity" id="about-twertwo">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<!-- Section Badge -->
+<div class="flex flex-col items-center text-center mb-12">
+<div class="inline-block px-4 py-1.5 bg-brand-peach border-2 border-brand-dark rounded-lg shadow-brutal-sm font-display font-extrabold text-xs uppercase tracking-widest mb-3">
+          SECTION 03 // OUR IDENTITY
+        </div>
+<h2 class="text-3xl sm:text-5xl font-display font-black tracking-tight text-brand-dark">
+          Who are Twertwo?
+        </h2>
+</div>
+<!-- Identity Card Box with Neo-brutalist circle badge inspired by Reference -->
+<div class="relative max-w-4xl mx-auto bg-white border-3 border-brand-dark rounded-3xl p-8 sm:p-12 shadow-brutal-lg">
+<!-- Floating Class Badge on Top Right -->
+<div class="absolute -top-6 -right-4 sm:-right-6 w-20 h-20 sm:w-24 sm:h-24 rounded-full bg-brand-green border-3 border-brand-dark flex flex-col items-center justify-center shadow-brutal rotate-12 hover:rotate-0 transition-transform">
+<span class="font-display font-black text-xs sm:text-sm leading-tight text-black">XII</span>
+<span class="font-display font-black text-xs sm:text-sm leading-tight text-black">RPL 2!</span>
+</div>
+<p class="text-lg sm:text-2xl font-display font-bold text-center leading-relaxed text-gray-900">
+<span class="underline decoration-wavy decoration-rose-500">Twertwo</span> is the proud nickname of <span class="text-rose-600 font-extrabold underline">XII RPL 2 at SMKN 64 JAKARTA</span>.
+        </p>
+<p class="mt-4 text-base sm:text-lg text-gray-700 text-center font-medium leading-relaxed max-w-2xl mx-auto">
+          Twertwo is a gathering place for creative and talented individuals. We share memories, achievements, and grow together as a united community through lines of code, late night coffee, and unforgettable high school bonds.
+        </p>
+<!-- Fun Stats Grid -->
+<div class="mt-10 grid grid-cols-2 sm:grid-cols-4 gap-4 text-center border-t-2 border-brand-dark pt-8">
+<div class="p-3 bg-brand-cream border-2 border-brand-dark rounded-xl shadow-brutal-sm">
+<span class="block font-display font-black text-3xl text-brand-dark">36</span>
+<span class="text-xs font-bold text-gray-600 uppercase">Engineers</span>
+</div>
+<div class="p-3 bg-brand-cream border-2 border-brand-dark rounded-xl shadow-brutal-sm">
+<span class="block font-display font-black text-3xl text-rose-500">100+</span>
+<span class="text-xs font-bold text-gray-600 uppercase">Daily Bugs</span>
+</div>
+<div class="p-3 bg-brand-cream border-2 border-brand-dark rounded-xl shadow-brutal-sm">
+<span class="block font-display font-black text-3xl text-emerald-600">∞</span>
+<span class="text-xs font-bold text-gray-600 uppercase">Laughter</span>
+</div>
+<div class="p-3 bg-brand-cream border-2 border-brand-dark rounded-xl shadow-brutal-sm">
+<span class="block font-display font-black text-3xl text-purple-600">24/25</span>
+<span class="text-xs font-bold text-gray-600 uppercase">Batch Year</span>
+</div>
+</div>
+</div>
+<!-- Captured Moments Preview Strip -->
+<div class="mt-16 text-center">
+<div class="inline-block px-6 py-2.5 bg-rose-500 text-white font-display font-extrabold text-sm uppercase tracking-wider rounded-xl border-2 border-brand-dark shadow-brutal mb-8">
+          CAPTURED MOMENTS &amp; MEMORIES
+        </div>
+<!-- Polaroid / Collage Visual Mockup -->
+<div class="relative max-w-4xl mx-auto flex items-center justify-center p-4">
+<!-- Main Group Photo Frame -->
+<div class="relative bg-white border-3 border-brand-dark rounded-2xl p-3 shadow-brutal-lg max-w-2xl transform hover:scale-[1.01] transition-transform">
+<div class="overflow-hidden rounded-xl border-2 border-brand-dark aspect-video bg-gray-100 flex items-center justify-center">
+<img alt="XII RPL 2 Class photo together at SMKN 64 Jakarta" class="w-full h-full object-cover" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='800' height='450' viewBox='0 0 800 450'%3E%3Crect width='800' height='450' fill='%23bae6fd'/%3E%3Ctext x='50%25' y='45%25' dominant-baseline='middle' text-anchor='middle' font-family='sans-serif' font-weight='bold' font-size='28' fill='%230f172a'%3EXII RPL 2 SMKN 64 JAKARTA%3C/text%3E%3Ctext x='50%25' y='55%25' dominant-baseline='middle' text-anchor='middle' font-family='sans-serif' font-size='18' fill='%23334155'%3ETogether We Code, Together We Shine%3C/text%3E%3C/svg%3E"/>
+</div>
+<div class="pt-3 pb-1 px-2 flex justify-between items-center font-display font-bold text-sm">
+<span>Classroom Hangout • SMKN 64 Jakarta</span>
+<span class="text-rose-500 font-mono-code font-bold">#TwertwoForever</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- END: Section3AboutTwertwo -->
+<!-- BEGIN: Section4Students -->
+<section class="py-20 bg-white border-b-2 border-brand-dark" data-purpose="students-roster" id="students">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<!-- Section Header -->
+<div class="flex flex-col items-center text-center mb-10">
+<div class="inline-block px-5 py-2 bg-brand-yellow border-2 border-brand-dark rounded-xl shadow-brutal font-display font-black text-sm uppercase tracking-widest mb-3">
+          STUDENTS
+        </div>
+<h2 class="text-3xl sm:text-5xl font-display font-black tracking-tight text-brand-dark">
+          Meet the Twertwo Squad
+        </h2>
+<p class="mt-3 text-gray-600 font-medium max-w-xl">
+          Klik salah satu kartu siswa di bawah untuk melihat kutipan personal, role keahlian, dan profil media sosial!
+        </p>
+</div>
+<!-- Filter Tabs -->
+<div class="flex flex-wrap items-center justify-center gap-2 mb-12" id="filter-container">
+<button class="filter-btn active px-4 py-2 bg-brand-dark text-white font-display font-bold text-xs uppercase rounded-lg border-2 border-brand-dark shadow-brutal-sm" data-filter="all">All Students (8)</button>
+<button class="filter-btn px-4 py-2 bg-brand-cream hover:bg-brand-yellow text-brand-dark font-display font-bold text-xs uppercase rounded-lg border-2 border-brand-dark shadow-brutal-sm transition-colors" data-filter="frontend">Frontend</button>
+<button class="filter-btn px-4 py-2 bg-brand-cream hover:bg-brand-yellow text-brand-dark font-display font-bold text-xs uppercase rounded-lg border-2 border-brand-dark shadow-brutal-sm transition-colors" data-filter="backend">Backend</button>
+<button class="filter-btn px-4 py-2 bg-brand-cream hover:bg-brand-yellow text-brand-dark font-display font-bold text-xs uppercase rounded-lg border-2 border-brand-dark shadow-brutal-sm transition-colors" data-filter="mobile">Mobile &amp; Game</button>
+<button class="filter-btn px-4 py-2 bg-brand-cream hover:bg-brand-yellow text-brand-dark font-display font-bold text-xs uppercase rounded-lg border-2 border-brand-dark shadow-brutal-sm transition-colors" data-filter="creative">UI/UX &amp; QA</button>
+</div>
+<!-- Students Neo-brutalist 4-column Grid -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6" id="student-cards-grid">
+<!-- Student 1: Farhan Akbar F. (Featured in reference popup) -->
+<article class="student-card group bg-white border-3 border-brand-dark rounded-2xl p-4 shadow-brutal hover:-translate-y-1.5 transition-all cursor-pointer" data-avatar="https://placehold.co/400x500/fee2e2/111827?text=Farhan+Akbar" data-born="10 MEI 2000" data-category="frontend" data-ig="@farhanakbr" data-name="FARHAN AKBAR F." data-quote="Belajar dari kesalahan adalah kunci untuk menjadi lebih baik." data-role="Fullstack Explorer &amp; LKS Finalist">
+<div class="aspect-square w-full rounded-xl border-2 border-brand-dark overflow-hidden mb-3 bg-rose-100 relative">
+<img alt="Farhan Akbar F." class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBFf0gEmADBrg_wzS_WvOK9_PH1IT9-v5jnEG8J4hMR7KgapBaCxutJq_dsl-ayEdDcD-iZ5j8Ij_O9f_JoGcuWcQ0GtJf1vhArajUSLI9YL949Sk-ZI6muonfwKkYn9bgVFRnnMdgm8kaZAVV3lMQSM7jcdpnFiwNynRVvtg6B5AyFI6ioEh5i3L-hc0Rk84XXS5JNNtIefX7EA5rcHp9tCr8bfSGlU4kLt0Yi4cI"/>
+<span class="absolute top-2 right-2 bg-brand-yellow font-mono-code font-bold text-[10px] px-2 py-0.5 rounded border border-brand-dark">Fullstack</span>
+</div>
+<h3 class="font-display font-black text-center text-lg text-brand-dark tracking-tight">FARHAN AKBAR F.</h3>
+<p class="text-xs text-gray-500 font-mono-code text-center font-bold mt-0.5">XII RPL 2</p>
+<button class="mt-3 w-full py-2 bg-brand-cyan text-brand-dark font-display font-black text-xs rounded-xl border-2 border-brand-dark shadow-brutal-sm group-hover:bg-brand-yellow transition-colors">
+            VIEW PROFILE →
+          </button>
+</article>
+<!-- Student 2: M. Yazid Hazami -->
+<article class="student-card group bg-white border-3 border-brand-dark rounded-2xl p-4 shadow-brutal hover:-translate-y-1.5 transition-all cursor-pointer" data-avatar="https://placehold.co/400x500/fef08a/111827?text=M.+Yazid" data-born="14 APRIL 2007" data-category="frontend" data-ig="@yazidhzm" data-name="M. YAZID HAZAMI" data-quote="Coding santai, hasil bantai. Tetap konsisten walau ngantuk." data-role="Frontend Crafter">
+<div class="aspect-square w-full rounded-xl border-2 border-brand-dark overflow-hidden mb-3 bg-yellow-100 relative">
+<img alt="M. Yazid Hazami" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAxU-XrD6n9dkPC2I1QX8BdyJW2QSdtkMBeMD6bre45gaygoYIItSy-9G83pI8WPZr-5e_d5_pczzQHVxzZIE8Bnxcw5A4HJGacE2gENqjedLPwKUP5CJAf_Uw-v0__mc1yRPlCWpURe3M9wCIfZWU-kda_ZEPmxEc4DGrDOl0URBIyxQE4B8G8S1ZuaiUQGpT73zPjTGQmrhnXQ8OjjW5V4uFYSDgfNSp14k-UtFk"/>
+<span class="absolute top-2 right-2 bg-brand-green font-mono-code font-bold text-[10px] px-2 py-0.5 rounded border border-brand-dark">Frontend</span>
+</div>
+<h3 class="font-display font-black text-center text-lg text-brand-dark tracking-tight">M. YAZID HAZAMI</h3>
+<p class="text-xs text-gray-500 font-mono-code text-center font-bold mt-0.5">XII RPL 2</p>
+<button class="mt-3 w-full py-2 bg-brand-cyan text-brand-dark font-display font-black text-xs rounded-xl border-2 border-brand-dark shadow-brutal-sm group-hover:bg-brand-yellow transition-colors">
+            VIEW PROFILE →
+          </button>
+</article>
+<!-- Student 3: Leo Dimas Pamungkas -->
+<article class="student-card group bg-white border-3 border-brand-dark rounded-2xl p-4 shadow-brutal hover:-translate-y-1.5 transition-all cursor-pointer" data-avatar="https://placehold.co/400x500/bae6fd/111827?text=Leo+Dimas" data-born="22 AGUSTUS 2006" data-category="backend" data-ig="@leodimas.p" data-name="LEO DIMAS PAMUNGKAS" data-quote="Server boleh down sesaat, semangat pantang tumbang selamanya." data-role="Backend Architect">
+<div class="aspect-square w-full rounded-xl border-2 border-brand-dark overflow-hidden mb-3 bg-sky-100 relative">
+<img alt="Leo Dimas Pamungkas" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC_pNDvzGEFyuP-4SEMMo6OgK8S9GyZp06_9f2_t90CHzmRaFLlOLk922SVPcZUjZU-OWtQWh0zVDG2rT4A0VeujgIu7p9I_IEO5DOA8QSFDk76dtoXrmaeq7Nw4EKTzY_dyigobgGsrl5SACyu_b3HadQj7cObIgp6rjYdtfiR1vFPkp03hpq8d-bpkZOqc0gtW05Rahz539vU4hg9pv4pFJzEkEz0vRHC1cu_FG4"/>
+<span class="absolute top-2 right-2 bg-brand-pink font-mono-code font-bold text-[10px] px-2 py-0.5 rounded border border-brand-dark text-white">Backend</span>
+</div>
+<h3 class="font-display font-black text-center text-lg text-brand-dark tracking-tight">LEO DIMAS P.</h3>
+<p class="text-xs text-gray-500 font-mono-code text-center font-bold mt-0.5">XII RPL 2</p>
+<button class="mt-3 w-full py-2 bg-brand-cyan text-brand-dark font-display font-black text-xs rounded-xl border-2 border-brand-dark shadow-brutal-sm group-hover:bg-brand-yellow transition-colors">
+            VIEW PROFILE →
+          </button>
+</article>
+<!-- Student 4: Rayvanes Arrasyid -->
+<article class="student-card group bg-white border-3 border-brand-dark rounded-2xl p-4 shadow-brutal hover:-translate-y-1.5 transition-all cursor-pointer" data-avatar="https://placehold.co/400x500/e9d5ff/111827?text=Rayvanes" data-born="05 MARET 2007" data-category="mobile" data-ig="@rayvanes" data-name="RAYVANES ARRASYID" data-quote="Tetap hidup dan terus ngulik walau error bertubi-tubi." data-role="Mobile Developer (Flutter)">
+<div class="aspect-square w-full rounded-xl border-2 border-brand-dark overflow-hidden mb-3 bg-purple-100 relative">
+<img alt="Rayvanes Arrasyid" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDEzOUnCRvQ2BAlswUHrAInpYSLDSY-I176n8_nGs5I8uOz1zfvGLQUB3AQv7x13s3BvHVSsJyW1L7b6Y9tnCpsPFnPsJl4EjAkhF5t_l4gzljo87t9bQJFsd2izVvR09cF-ah9DNgql_4sUod-F4JYoU97NrW-BH7egKZAqtKPrNR4N5AVYJE7p1_okd8pLkjhUHSR3LNalHUbRKoQh5wivFEkAL2KngNCASMuXOw"/>
+<span class="absolute top-2 right-2 bg-brand-cyan font-mono-code font-bold text-[10px] px-2 py-0.5 rounded border border-brand-dark">Mobile</span>
+</div>
+<h3 class="font-display font-black text-center text-lg text-brand-dark tracking-tight">RAYVANES ARRASYID</h3>
+<p class="text-xs text-gray-500 font-mono-code text-center font-bold mt-0.5">XII RPL 2</p>
+<button class="mt-3 w-full py-2 bg-brand-cyan text-brand-dark font-display font-black text-xs rounded-xl border-2 border-brand-dark shadow-brutal-sm group-hover:bg-brand-yellow transition-colors">
+            VIEW PROFILE →
+          </button>
+</article>
+<!-- Student 5: Anaz Ramadhan Luberto -->
+<article class="student-card group bg-white border-3 border-brand-dark rounded-2xl p-4 shadow-brutal hover:-translate-y-1.5 transition-all cursor-pointer" data-avatar="https://placehold.co/400x500/fbcfe8/111827?text=Anaz+Ramadhan" data-born="18 OKTOBER 2006" data-category="creative" data-ig="@anazluberto" data-name="ANAZ RAMADHAN LUBERTO" data-quote="Desain adalah seni menyelesaikan masalah tanpa membuat pengguna pusing." data-role="Creative UI/UX Engineer">
+<div class="aspect-square w-full rounded-xl border-2 border-brand-dark overflow-hidden mb-3 bg-pink-100 relative">
+<img alt="Anaz Ramadhan Luberto" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCZeXdob1ZNrWL4JzsrXwUKpXD4MvvnXb9Gx2R0ie-FLHdjqT0HE5jaGV6DxyuS0GsLghQXEYGts5vEDp4t7OqLKVvrnlWntSlkS_jJ-lIcmKYnWCtgomHAl64027P2_-o_q-NRN6DeJ2gYOfM-agaHHLKCgsRNcb53wrxO6dIJxYj6jiNDldbOmy52B8MgLfnIRR8zKLg1Z-i7h7IuiZ6mJSU7fLrPDmy6kk6MkT4"/>
+<span class="absolute top-2 right-2 bg-brand-yellow font-mono-code font-bold text-[10px] px-2 py-0.5 rounded border border-brand-dark">UI/UX</span>
+</div>
+<h3 class="font-display font-black text-center text-lg text-brand-dark tracking-tight">ANAZ RAMADHAN L.</h3>
+<p class="text-xs text-gray-500 font-mono-code text-center font-bold mt-0.5">XII RPL 2</p>
+<button class="mt-3 w-full py-2 bg-brand-cyan text-brand-dark font-display font-black text-xs rounded-xl border-2 border-brand-dark shadow-brutal-sm group-hover:bg-brand-yellow transition-colors">
+            VIEW PROFILE →
+          </button>
+</article>
+<!-- Student 6: M. Akhtar Abdillah -->
+<article class="student-card group bg-white border-3 border-brand-dark rounded-2xl p-4 shadow-brutal hover:-translate-y-1.5 transition-all cursor-pointer" data-avatar="https://placehold.co/400x500/fed7aa/111827?text=Akhtar+Abdillah" data-born="02 JULI 2006" data-category="backend" data-ig="@akhtar.abdillah" data-name="M. AKHTAR ABDILLAH" data-quote="Automate everything, sleep peacefully while the CI/CD pipeline works." data-role="DevOps &amp; Cloud Enthusiast">
+<div class="aspect-square w-full rounded-xl border-2 border-brand-dark overflow-hidden mb-3 bg-orange-100 relative">
+<img alt="M. Akhtar Abdillah" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA5T_RCVOhnwKGUi25Cc3308sJqV5AWxkROQzdG5BiMeAf-qUyf9prrjHvKlz4tXq2oy6vLNYWFzVgQiVu2GTgrZ2IN7RhAuZoEg2dEP8L8Zja-Fmm6SWXRQ89EoIaRBNPytOImh4s1ccUFZahkqZDfD4LoOb9fSYqYUeh_gEVchoDhjtdNK-Q74uXM4na8CBv8ofpPcnrPihyUUK8PXXHFfsj8NyFHbKBemWGrYh4"/>
+<span class="absolute top-2 right-2 bg-brand-purple font-mono-code font-bold text-[10px] px-2 py-0.5 rounded border border-brand-dark text-white">DevOps</span>
+</div>
+<h3 class="font-display font-black text-center text-lg text-brand-dark tracking-tight">M. AKHTAR ABDILLAH</h3>
+<p class="text-xs text-gray-500 font-mono-code text-center font-bold mt-0.5">XII RPL 2</p>
+<button class="mt-3 w-full py-2 bg-brand-cyan text-brand-dark font-display font-black text-xs rounded-xl border-2 border-brand-dark shadow-brutal-sm group-hover:bg-brand-yellow transition-colors">
+            VIEW PROFILE →
+          </button>
+</article>
+<!-- Student 7: M. Ramadhan P.W. -->
+<article class="student-card group bg-white border-3 border-brand-dark rounded-2xl p-4 shadow-brutal hover:-translate-y-1.5 transition-all cursor-pointer" data-avatar="https://placehold.co/400x500/bbf7d0/111827?text=Ramadhan+P.W." data-born="12 NOVEMBER 2006" data-category="creative" data-ig="@ramadhan.pw" data-name="M. RAMADHAN P.W." data-quote="Jangan biarkan bug sekecil apapun lolos ke production!" data-role="Quality Assurance &amp; Logic">
+<div class="aspect-square w-full rounded-xl border-2 border-brand-dark overflow-hidden mb-3 bg-green-100 relative">
+<img alt="M. Ramadhan P.W." class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBDoUwfOwWxFlNUwv6YsVtJheklfB6ShAn236-MWuSW71BMGpQSQp5L4NR8xV_fokGnN_RTQm3X2xHSa86KjpfzTasZAPHLr2T0zL2JwHxQvZkhBsB-pzmbiAfkq4kbcJwXWnHQDtT8JwdAwNaTpLJdroPW2A369w5IGS4clY64N3pW5jh2ngnW9jncCBT882vwk1Ks3rBi9DXZ-2ei9fzhyBb2mOyOKabb6_h-fb4"/>
+<span class="absolute top-2 right-2 bg-brand-green font-mono-code font-bold text-[10px] px-2 py-0.5 rounded border border-brand-dark">QA Tester</span>
+</div>
+<h3 class="font-display font-black text-center text-lg text-brand-dark tracking-tight">M. RAMADHAN P.W.</h3>
+<p class="text-xs text-gray-500 font-mono-code text-center font-bold mt-0.5">XII RPL 2</p>
+<button class="mt-3 w-full py-2 bg-brand-cyan text-brand-dark font-display font-black text-xs rounded-xl border-2 border-brand-dark shadow-brutal-sm group-hover:bg-brand-yellow transition-colors">
+            VIEW PROFILE →
+          </button>
+</article>
+<!-- Student 8: Farrel Reno P.P. -->
+<article class="student-card group bg-white border-3 border-brand-dark rounded-2xl p-4 shadow-brutal hover:-translate-y-1.5 transition-all cursor-pointer" data-avatar="https://placehold.co/400x500/f3e8ff/111827?text=Farrel+Reno" data-born="30 JANUARI 2007" data-category="mobile" data-ig="@farrelreno" data-name="FARREL RENO P.P." data-quote="Pixels and logic make dreams come true." data-role="Game Logic &amp; Creative Dev">
+<div class="aspect-square w-full rounded-xl border-2 border-brand-dark overflow-hidden mb-3 bg-indigo-100 relative">
+<img alt="Farrel Reno P.P." class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCxc0i5pdYEUN5upjz_w9ABzKUgFfENevM3aASLq6HfH27Rm3r0uyeeDtH5YbIjkRlMj01AvFEu3S797-mFl-n7yDE3Ber5yubPU7nw-iAMJCCAU0coQ_gLInK0Tuf7I4ESF-DVcBHTlCM2tzjm-wB_jlpcWSVyYYWYIXlZrTesNZJjKyRhiZyMdrtga7Hg2ChmxmSvxrdl92hm8NJPEfodi4-C1wZWhQAJKgrqjvM"/>
+<span class="absolute top-2 right-2 bg-brand-peach font-mono-code font-bold text-[10px] px-2 py-0.5 rounded border border-brand-dark text-black">Game Dev</span>
+</div>
+<h3 class="font-display font-black text-center text-lg text-brand-dark tracking-tight">FARREL RENO P.P.</h3>
+<p class="text-xs text-gray-500 font-mono-code text-center font-bold mt-0.5">XII RPL 2</p>
+<button class="mt-3 w-full py-2 bg-brand-cyan text-brand-dark font-display font-black text-xs rounded-xl border-2 border-brand-dark shadow-brutal-sm group-hover:bg-brand-yellow transition-colors">
+            VIEW PROFILE →
+          </button>
+</article>
+</div>
+</div>
+</section>
+<!-- END: Section4Students -->
+<!-- BEGIN: Section5Achievements -->
+<!-- BEGIN: SectionProjectsShowcase -->
+<section class="py-20 bg-brand-cream border-b-2 border-brand-dark relative" data-purpose="projects-showcase" id="projects">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<!-- Section Header -->
+<div class="flex flex-col items-center text-center mb-12">
+<div class="inline-block px-4 py-1.5 bg-brand-purple text-white border-2 border-brand-dark rounded-lg shadow-brutal-sm font-display font-extrabold text-xs uppercase tracking-widest mb-3">
+      SECTION 04 // FEATURED PROJECTS
+    </div>
+<h2 class="text-3xl sm:text-5xl font-display font-black tracking-tight text-brand-dark uppercase">
+      Built by Twertwo Minds
+    </h2>
+<p class="mt-3 text-base sm:text-lg text-gray-700 font-medium max-w-2xl">
+      Kumpulan karya inovatif dan produk digital nyata yang dirancang serta dikembangkan oleh siswa-siswi XII RPL 2 SMKN 64 Jakarta.
+    </p>
+</div>
+<!-- Projects Filter Tabs -->
+<div class="flex flex-wrap items-center justify-center gap-2 mb-12" id="project-filter-container">
+<button class="filter-btn px-4 py-2 bg-brand-dark text-white font-display font-bold text-xs uppercase rounded-lg border-2 border-brand-dark shadow-brutal-sm cursor-pointer" data-pfilter="all">All Projects (6)</button>
+<button class="filter-btn px-4 py-2 bg-white hover:bg-brand-yellow text-brand-dark font-display font-bold text-xs uppercase rounded-lg border-2 border-brand-dark shadow-brutal-sm transition-colors cursor-pointer" data-pfilter="web">Web Apps</button>
+<button class="filter-btn px-4 py-2 bg-white hover:bg-brand-yellow text-brand-dark font-display font-bold text-xs uppercase rounded-lg border-2 border-brand-dark shadow-brutal-sm transition-colors cursor-pointer" data-pfilter="mobile">Mobile Apps</button>
+<button class="filter-btn px-4 py-2 bg-white hover:bg-brand-yellow text-brand-dark font-display font-bold text-xs uppercase rounded-lg border-2 border-brand-dark shadow-brutal-sm transition-colors cursor-pointer" data-pfilter="games">Games &amp; Tools</button>
+</div>
+<!-- Project Cards Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="project-cards-grid">
+<!-- Project 1: EduPintar LMS -->
+<article class="project-card group bg-white border-3 border-brand-dark rounded-3xl p-5 shadow-brutal-lg flex flex-col justify-between hover:-translate-y-1.5 transition-all" data-pcat="web" data-pdesc="EduPintar adalah platform Learning Management System modern yang dirancang untuk sekolah kejuruan, dilengkapi modul kuis interaktif real-time, submission tugas otomatis, dan grading transparan." data-pfeatures="Realtime Quiz with WebSockets, Automatic Code Evaluator, Student Performance Analytics, Responsive Multi-device UI" data-pgithub="https://github.com/smkn64-twertwo/edupintar-lms" data-pimage="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='600' height='350' viewBox='0 0 600 350'%3E%3Crect width='600' height='350' fill='%23FDE047'/%3E%3Crect x='30' y='30' width='540' height='290' rx='16' fill='%23121212'/%3E%3Ctext x='50%25' y='45%25' dominant-baseline='middle' text-anchor='middle' font-family='sans-serif' font-weight='800' font-size='26' fill='%23ffffff'%3E🎓 EDUPINTAR LMS%3C/text%3E%3Ctext x='50%25' y='60%25' dominant-baseline='middle' text-anchor='middle' font-family='sans-serif' font-size='16' fill='%2338BDF8'%3ESchool Management &amp; Interactive Learning%3C/text%3E%3C/svg%3E" data-pteam="Farhan Akbar &amp; Yazid Hazami" data-ptech="React.js • Tailwind CSS • Laravel • MySQL" data-ptitle="EduPintar - LMS Platform">
+<div>
+<div class="aspect-video w-full rounded-2xl border-2 border-brand-dark overflow-hidden mb-4 relative bg-amber-100">
+<img alt="EduPintar - LMS Platform" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='600' height='350' viewBox='0 0 600 350'%3E%3Crect width='600' height='350' fill='%23FDE047'/%3E%3Crect x='30' y='30' width='540' height='290' rx='16' fill='%23121212'/%3E%3Ctext x='50%25' y='45%25' dominant-baseline='middle' text-anchor='middle' font-family='sans-serif' font-weight='800' font-size='26' fill='%23ffffff'%3E🎓 EDUPINTAR LMS%3C/text%3E%3Ctext x='50%25' y='60%25' dominant-baseline='middle' text-anchor='middle' font-family='sans-serif' font-size='16' fill='%2338BDF8'%3ESchool Management &amp; Interactive Learning%3C/text%3E%3C/svg%3E"/>
+<span class="absolute top-3 right-3 bg-brand-yellow font-mono-code font-bold text-[10px] px-2.5 py-1 rounded-md border border-brand-dark shadow-brutal-sm uppercase">Web App</span>
+</div>
+<div class="text-[11px] font-mono-code font-bold text-purple-600 mb-1">By Farhan Akbar &amp; Yazid Hazami</div>
+<h3 class="font-display font-black text-xl text-brand-dark mb-2 leading-tight">EduPintar - LMS Platform</h3>
+<p class="text-xs text-gray-600 line-clamp-3 leading-relaxed mb-4">
+          Platform Learning Management System cerdas dengan submission tugas instan, kuis adaptif, dan dashboard analitik nilai siswa terpadu.
+        </p>
+<div class="flex flex-wrap gap-1.5 mb-5">
+<span class="text-[10px] font-mono-code font-bold bg-amber-100 border border-brand-dark px-2 py-0.5 rounded">React.js</span>
+<span class="text-[10px] font-mono-code font-bold bg-purple-100 border border-brand-dark px-2 py-0.5 rounded">Laravel</span>
+<span class="text-[10px] font-mono-code font-bold bg-sky-100 border border-brand-dark px-2 py-0.5 rounded">Tailwind</span>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-2 pt-3 border-t-2 border-gray-100">
+<button class="project-detail-btn py-2 px-3 bg-brand-cyan text-brand-dark font-display font-black text-xs rounded-xl border-2 border-brand-dark shadow-brutal-sm hover:bg-brand-yellow transition-colors cursor-pointer text-center">
+          DETAILS →
+        </button>
+<a class="py-2 px-3 bg-brand-dark text-white font-display font-bold text-xs rounded-xl border-2 border-brand-dark shadow-brutal-sm hover:bg-gray-800 transition-colors flex items-center justify-center gap-1.5" href="https://github.com/smkn64-twertwo/edupintar-lms" rel="noreferrer" target="_blank">
+<svg class="w-3.5 h-3.5 fill-current" viewbox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"></path></svg>
+<span>REPO</span>
+</a>
+</div>
+</article>
+<!-- Project 2: YukRecycle Mobile App -->
+<article class="project-card group bg-white border-3 border-brand-dark rounded-3xl p-5 shadow-brutal-lg flex flex-col justify-between hover:-translate-y-1.5 transition-all" data-pcat="mobile" data-pdesc="Aplikasi mobile untuk penjemputan sampah anorganik sekolah &amp; perumahan. Menggunakan pemetaan GPS, reward token daur ulang, serta sistem tracking driver secara live." data-pfeatures="Live GPS Waste Pickup, QR Code Verification, Eco-Points &amp; Rewards, Offline Support" data-pgithub="https://github.com/smkn64-twertwo/yukrecycle-app" data-pimage="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='600' height='350' viewBox='0 0 600 350'%3E%3Crect width='600' height='350' fill='%234ADE80'/%3E%3Crect x='30' y='30' width='540' height='290' rx='16' fill='%23121212'/%3E%3Ctext x='50%25' y='45%25' dominant-baseline='middle' text-anchor='middle' font-family='sans-serif' font-weight='800' font-size='26' fill='%23ffffff'%3E♻️ YUKRECYCLE APP%3C/text%3E%3Ctext x='50%25' y='60%25' dominant-baseline='middle' text-anchor='middle' font-family='sans-serif' font-size='16' fill='%234ADE80'%3ESmart Waste Pickup &amp; Eco-Token%3C/text%3E%3C/svg%3E" data-pteam="Rayvanes Arrasyid &amp; Anaz Ramadhan" data-ptech="Flutter • Dart • Firebase • Google Maps API" data-ptitle="YukRecycle - Smart Waste Mobile App">
+<div>
+<div class="aspect-video w-full rounded-2xl border-2 border-brand-dark overflow-hidden mb-4 relative bg-green-100">
+<img alt="YukRecycle - Smart Waste Mobile App" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='600' height='350' viewBox='0 0 600 350'%3E%3Crect width='600' height='350' fill='%234ADE80'/%3E%3Crect x='30' y='30' width='540' height='290' rx='16' fill='%23121212'/%3E%3Ctext x='50%25' y='45%25' dominant-baseline='middle' text-anchor='middle' font-family='sans-serif' font-weight='800' font-size='26' fill='%23ffffff'%3E♻️ YUKRECYCLE APP%3C/text%3E%3Ctext x='50%25' y='60%25' dominant-baseline='middle' text-anchor='middle' font-family='sans-serif' font-size='16' fill='%234ADE80'%3ESmart Waste Pickup &amp; Eco-Token%3C/text%3E%3C/svg%3E"/>
+<span class="absolute top-3 right-3 bg-brand-green font-mono-code font-bold text-[10px] px-2.5 py-1 rounded-md border border-brand-dark shadow-brutal-sm uppercase">Mobile App</span>
+</div>
+<div class="text-[11px] font-mono-code font-bold text-emerald-600 mb-1">By Rayvanes Arrasyid &amp; Anaz Ramadhan</div>
+<h3 class="font-display font-black text-xl text-brand-dark mb-2 leading-tight">YukRecycle - Smart Waste</h3>
+<p class="text-xs text-gray-600 line-clamp-3 leading-relaxed mb-4">
+          Solusi mobile ramah lingkungan untuk penjemputan daur ulang sampah dengan penukaran poin reward dan rute driver real-time.
+        </p>
+<div class="flex flex-wrap gap-1.5 mb-5">
+<span class="text-[10px] font-mono-code font-bold bg-cyan-100 border border-brand-dark px-2 py-0.5 rounded">Flutter</span>
+<span class="text-[10px] font-mono-code font-bold bg-rose-100 border border-brand-dark px-2 py-0.5 rounded">Firebase</span>
+<span class="text-[10px] font-mono-code font-bold bg-emerald-100 border border-brand-dark px-2 py-0.5 rounded">Maps API</span>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-2 pt-3 border-t-2 border-gray-100">
+<button class="project-detail-btn py-2 px-3 bg-brand-cyan text-brand-dark font-display font-black text-xs rounded-xl border-2 border-brand-dark shadow-brutal-sm hover:bg-brand-yellow transition-colors cursor-pointer text-center">
+          DETAILS →
+        </button>
+<a class="py-2 px-3 bg-brand-dark text-white font-display font-bold text-xs rounded-xl border-2 border-brand-dark shadow-brutal-sm hover:bg-gray-800 transition-colors flex items-center justify-center gap-1.5" href="https://github.com/smkn64-twertwo/yukrecycle-app" rel="noreferrer" target="_blank">
+<svg class="w-3.5 h-3.5 fill-current" viewbox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"></path></svg>
+<span>REPO</span>
+</a>
+</div>
+</article>
+<!-- Project 3: KasirKu POS -->
+<article class="project-card group bg-white border-3 border-brand-dark rounded-3xl p-5 shadow-brutal-lg flex flex-col justify-between hover:-translate-y-1.5 transition-all" data-pcat="web" data-pdesc="Sistem Point of Sale modern dan super ringan untuk kantin sekolah serta UMKM binaan SMKN 64 Jakarta dengan pencatatan inventori otomatis &amp; struk digital via Bluetooth." data-pfeatures="Fast Barcode Scanner, Bluetooth Thermal Printer integration, Daily Profit/Loss Reports, Multi-cashier roles" data-pgithub="https://github.com/smkn64-twertwo/kasirku-pos" data-pimage="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='600' height='350' viewBox='0 0 600 350'%3E%3Crect width='600' height='350' fill='%2338BDF8'/%3E%3Crect x='30' y='30' width='540' height='290' rx='16' fill='%23121212'/%3E%3Ctext x='50%25' y='45%25' dominant-baseline='middle' text-anchor='middle' font-family='sans-serif' font-weight='800' font-size='26' fill='%23ffffff'%3E🛒 KASIRKU POS%3C/text%3E%3Ctext x='50%25' y='60%25' dominant-baseline='middle' text-anchor='middle' font-family='sans-serif' font-size='16' fill='%23FDE047'%3EPoint of Sale &amp; Inventory Manager%3C/text%3E%3C/svg%3E" data-pteam="Leo Dimas &amp; M. Ramadhan P.W." data-ptech="Next.js • Express • PostgreSQL • Prisma" data-ptitle="KasirKu POS - Point of Sale">
+<div>
+<div class="aspect-video w-full rounded-2xl border-2 border-brand-dark overflow-hidden mb-4 relative bg-sky-100">
+<img alt="KasirKu POS - Point of Sale" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='600' height='350' viewBox='0 0 600 350'%3E%3Crect width='600' height='350' fill='%2338BDF8'/%3E%3Crect x='30' y='30' width='540' height='290' rx='16' fill='%23121212'/%3E%3Ctext x='50%25' y='45%25' dominant-baseline='middle' text-anchor='middle' font-family='sans-serif' font-weight='800' font-size='26' fill='%23ffffff'%3E🛒 KASIRKU POS%3C/text%3E%3Ctext x='50%25' y='60%25' dominant-baseline='middle' text-anchor='middle' font-family='sans-serif' font-size='16' fill='%23FDE047'%3EPoint of Sale &amp; Inventory Manager%3C/text%3E%3C/svg%3E"/>
+<span class="absolute top-3 right-3 bg-brand-cyan font-mono-code font-bold text-[10px] px-2.5 py-1 rounded-md border border-brand-dark shadow-brutal-sm uppercase">Web App</span>
+</div>
+<div class="text-[11px] font-mono-code font-bold text-sky-600 mb-1">By Leo Dimas &amp; M. Ramadhan P.W.</div>
+<h3 class="font-display font-black text-xl text-brand-dark mb-2 leading-tight">KasirKu POS System</h3>
+<p class="text-xs text-gray-600 line-clamp-3 leading-relaxed mb-4">
+          Aplikasi kasir kilat dengan analitik stok, barcode scanner responsif, dan pelaporan keuangan laba rugi otomatis.
+        </p>
+<div class="flex flex-wrap gap-1.5 mb-5">
+<span class="text-[10px] font-mono-code font-bold bg-sky-100 border border-brand-dark px-2 py-0.5 rounded">Next.js</span>
+<span class="text-[10px] font-mono-code font-bold bg-orange-100 border border-brand-dark px-2 py-0.5 rounded">Postgres</span>
+<span class="text-[10px] font-mono-code font-bold bg-amber-100 border border-brand-dark px-2 py-0.5 rounded">Prisma</span>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-2 pt-3 border-t-2 border-gray-100">
+<button class="project-detail-btn py-2 px-3 bg-brand-cyan text-brand-dark font-display font-black text-xs rounded-xl border-2 border-brand-dark shadow-brutal-sm hover:bg-brand-yellow transition-colors cursor-pointer text-center">
+          DETAILS →
+        </button>
+<a class="py-2 px-3 bg-brand-dark text-white font-display font-bold text-xs rounded-xl border-2 border-brand-dark shadow-brutal-sm hover:bg-gray-800 transition-colors flex items-center justify-center gap-1.5" href="https://github.com/smkn64-twertwo/kasirku-pos" rel="noreferrer" target="_blank">
+<svg class="w-3.5 h-3.5 fill-current" viewbox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"></path></svg>
+<span>REPO</span>
+</a>
+</div>
+</article>
+<!-- Project 4: PixelQuest RPG -->
+<article class="project-card group bg-white border-3 border-brand-dark rounded-3xl p-5 shadow-brutal-lg flex flex-col justify-between hover:-translate-y-1.5 transition-all" data-pcat="games" data-pdesc="Game 2D berbasis peramban (browser) bergenre retro turn-based RPG yang menceritakan petualangan programmer SMK menaklukkan monster 'Bug', 'NullPointer', dan 'SyntaxError'." data-pfeatures="Custom Pixel Art Sprites, Dynamic Turn-based Battle Engine, Save/Load LocalStorage System, Chiptune Music Synth" data-pgithub="https://github.com/smkn64-twertwo/pixelquest-rpg" data-pimage="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='600' height='350' viewBox='0 0 600 350'%3E%3Crect width='600' height='350' fill='%23FB923C'/%3E%3Crect x='30' y='30' width='540' height='290' rx='16' fill='%23121212'/%3E%3Ctext x='50%25' y='45%25' dominant-baseline='middle' text-anchor='middle' font-family='sans-serif' font-weight='800' font-size='26' fill='%23ffffff'%3E👾 PIXELQUEST RPG%3C/text%3E%3Ctext x='50%25' y='60%25' dominant-baseline='middle' text-anchor='middle' font-family='sans-serif' font-size='16' fill='%23FB923C'%3E2D Retro Browser Game &amp; Logic%3C/text%3E%3C/svg%3E" data-pteam="Farrel Reno &amp; M. Yazid" data-ptech="HTML5 Canvas • JavaScript ES6 • Web Audio API" data-ptitle="PixelQuest RPG - 2D Web Game">
+<div>
+<div class="aspect-video w-full rounded-2xl border-2 border-brand-dark overflow-hidden mb-4 relative bg-orange-100">
+<img alt="PixelQuest RPG - 2D Web Game" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='600' height='350' viewBox='0 0 600 350'%3E%3Crect width='600' height='350' fill='%23FB923C'/%3E%3Crect x='30' y='30' width='540' height='290' rx='16' fill='%23121212'/%3E%3Ctext x='50%25' y='45%25' dominant-baseline='middle' text-anchor='middle' font-family='sans-serif' font-weight='800' font-size='26' fill='%23ffffff'%3E👾 PIXELQUEST RPG%3C/text%3E%3Ctext x='50%25' y='60%25' dominant-baseline='middle' text-anchor='middle' font-family='sans-serif' font-size='16' fill='%23FB923C'%3E2D Retro Browser Game &amp; Logic%3C/text%3E%3C/svg%3E"/>
+<span class="absolute top-3 right-3 bg-brand-peach font-mono-code font-bold text-[10px] px-2.5 py-1 rounded-md border border-brand-dark shadow-brutal-sm uppercase text-black">Game</span>
+</div>
+<div class="text-[11px] font-mono-code font-bold text-orange-600 mb-1">By Farrel Reno &amp; M. Yazid</div>
+<h3 class="font-display font-black text-xl text-brand-dark mb-2 leading-tight">PixelQuest 2D RPG</h3>
+<p class="text-xs text-gray-600 line-clamp-3 leading-relaxed mb-4">
+          Petualangan retro 16-bit dengan pertarungan berbasis turn-based logic untuk mengalahkan monster syntax error.
+        </p>
+<div class="flex flex-wrap gap-1.5 mb-5">
+<span class="text-[10px] font-mono-code font-bold bg-amber-100 border border-brand-dark px-2 py-0.5 rounded">Canvas</span>
+<span class="text-[10px] font-mono-code font-bold bg-yellow-100 border border-brand-dark px-2 py-0.5 rounded">JavaScript</span>
+<span class="text-[10px] font-mono-code font-bold bg-purple-100 border border-brand-dark px-2 py-0.5 rounded">WebAudio</span>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-2 pt-3 border-t-2 border-gray-100">
+<button class="project-detail-btn py-2 px-3 bg-brand-cyan text-brand-dark font-display font-black text-xs rounded-xl border-2 border-brand-dark shadow-brutal-sm hover:bg-brand-yellow transition-colors cursor-pointer text-center">
+          DETAILS →
+        </button>
+<a class="py-2 px-3 bg-brand-dark text-white font-display font-bold text-xs rounded-xl border-2 border-brand-dark shadow-brutal-sm hover:bg-gray-800 transition-colors flex items-center justify-center gap-1.5" href="https://github.com/smkn64-twertwo/pixelquest-rpg" rel="noreferrer" target="_blank">
+<svg class="w-3.5 h-3.5 fill-current" viewbox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"></path></svg>
+<span>REPO</span>
+</a>
+</div>
+</article>
+<!-- Project 5: SMKN 64 Library Hub -->
+<article class="project-card group bg-white border-3 border-brand-dark rounded-3xl p-5 shadow-brutal-lg flex flex-col justify-between hover:-translate-y-1.5 transition-all" data-pcat="web" data-pdesc="Katalog buku perpustakaan digital SMKN 64 dengan fitur self-borrowing menggunakan scanner kartu pelajar RFID/NFC &amp; notifikasi pengembalian via bot Telegram." data-pfeatures="Student ID Card RFID Scan, Telegram Notification Webhook, Fine Penalty Calculator, Comprehensive ISBN Catalog" data-pgithub="https://github.com/smkn64-twertwo/smkn64-library" data-pimage="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='600' height='350' viewBox='0 0 600 350'%3E%3Crect width='600' height='350' fill='%23A855F7'/%3E%3Crect x='30' y='30' width='540' height='290' rx='16' fill='%23121212'/%3E%3Ctext x='50%25' y='45%25' dominant-baseline='middle' text-anchor='middle' font-family='sans-serif' font-weight='800' font-size='26' fill='%23ffffff'%3E📚 SMKN 64 LIBRARY HUB%3C/text%3E%3Ctext x='50%25' y='60%25' dominant-baseline='middle' text-anchor='middle' font-family='sans-serif' font-size='16' fill='%23F472B6'%3EDigital Catalog &amp; RFID Borrowing%3C/text%3E%3C/svg%3E" data-pteam="M. Akhtar Abdillah &amp; Leo Dimas" data-ptech="Vue.js • Express.js • PostgreSQL • Telegram API" data-ptitle="SMKN 64 Library System">
+<div>
+<div class="aspect-video w-full rounded-2xl border-2 border-brand-dark overflow-hidden mb-4 relative bg-purple-100">
+<img alt="SMKN 64 Library System" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='600' height='350' viewBox='0 0 600 350'%3E%3Crect width='600' height='350' fill='%23A855F7'/%3E%3Crect x='30' y='30' width='540' height='290' rx='16' fill='%23121212'/%3E%3Ctext x='50%25' y='45%25' dominant-baseline='middle' text-anchor='middle' font-family='sans-serif' font-weight='800' font-size='26' fill='%23ffffff'%3E📚 SMKN 64 LIBRARY HUB%3C/text%3E%3Ctext x='50%25' y='60%25' dominant-baseline='middle' text-anchor='middle' font-family='sans-serif' font-size='16' fill='%23F472B6'%3EDigital Catalog &amp; RFID Borrowing%3C/text%3E%3C/svg%3E"/>
+<span class="absolute top-3 right-3 bg-brand-purple font-mono-code font-bold text-[10px] px-2.5 py-1 rounded-md border border-brand-dark shadow-brutal-sm uppercase text-white">Web App</span>
+</div>
+<div class="text-[11px] font-mono-code font-bold text-purple-600 mb-1">By M. Akhtar &amp; Leo Dimas</div>
+<h3 class="font-display font-black text-xl text-brand-dark mb-2 leading-tight">SMKN 64 Library Hub</h3>
+<p class="text-xs text-gray-600 line-clamp-3 leading-relaxed mb-4">
+          Platform otomasi perpustakaan sekolah dengan peminjaman mandiri via QR, denda otomatis, dan notifikasi buku.
+        </p>
+<div class="flex flex-wrap gap-1.5 mb-5">
+<span class="text-[10px] font-mono-code font-bold bg-emerald-100 border border-brand-dark px-2 py-0.5 rounded">Vue.js</span>
+<span class="text-[10px] font-mono-code font-bold bg-pink-100 border border-brand-dark px-2 py-0.5 rounded">Express</span>
+<span class="text-[10px] font-mono-code font-bold bg-sky-100 border border-brand-dark px-2 py-0.5 rounded">Telegram</span>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-2 pt-3 border-t-2 border-gray-100">
+<button class="project-detail-btn py-2 px-3 bg-brand-cyan text-brand-dark font-display font-black text-xs rounded-xl border-2 border-brand-dark shadow-brutal-sm hover:bg-brand-yellow transition-colors cursor-pointer text-center">
+          DETAILS →
+        </button>
+<a class="py-2 px-3 bg-brand-dark text-white font-display font-bold text-xs rounded-xl border-2 border-brand-dark shadow-brutal-sm hover:bg-gray-800 transition-colors flex items-center justify-center gap-1.5" href="https://github.com/smkn64-twertwo/smkn64-library" rel="noreferrer" target="_blank">
+<svg class="w-3.5 h-3.5 fill-current" viewbox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"></path></svg>
+<span>REPO</span>
+</a>
+</div>
+</article>
+<!-- Project 6: Twertwo Bot -->
+<article class="project-card group bg-white border-3 border-brand-dark rounded-3xl p-5 shadow-brutal-lg flex flex-col justify-between hover:-translate-y-1.5 transition-all" data-pcat="games" data-pdesc="Asisten bot Discord resmi komunitas kelas XII RPL 2 untuk jadwal piket otomatis, reminder deadline tugas coding, reminder countdown ujian, dan pemutar musik voice channel." data-pfeatures="Class Schedule &amp; Homework Reminder, AI Code Explainer (/ask), Voice Channel High-Fi Music, Custom Mini Mini-Games" data-pgithub="https://github.com/smkn64-twertwo/twertwo-discord-bot" data-pimage="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='600' height='350' viewBox='0 0 600 350'%3E%3Crect width='600' height='350' fill='%23F472B6'/%3E%3Crect x='30' y='30' width='540' height='290' rx='16' fill='%23121212'/%3E%3Ctext x='50%25' y='45%25' dominant-baseline='middle' text-anchor='middle' font-family='sans-serif' font-weight='800' font-size='26' fill='%23ffffff'%3E🤖 TWERTWO BOT%3C/text%3E%3Ctext x='50%25' y='60%25' dominant-baseline='middle' text-anchor='middle' font-family='sans-serif' font-size='16' fill='%23F472B6'%3EDiscord Assistant &amp; Automation Tool%3C/text%3E%3C/svg%3E" data-pteam="Akhtar Abdillah &amp; Farrel Reno" data-ptech="Node.js • Discord.js • Docker • Redis" data-ptitle="Twertwo Bot - Discord Assistant">
+<div>
+<div class="aspect-video w-full rounded-2xl border-2 border-brand-dark overflow-hidden mb-4 relative bg-rose-100">
+<img alt="Twertwo Bot - Discord Assistant" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='600' height='350' viewBox='0 0 600 350'%3E%3Crect width='600' height='350' fill='%23F472B6'/%3E%3Crect x='30' y='30' width='540' height='290' rx='16' fill='%23121212'/%3E%3Ctext x='50%25' y='45%25' dominant-baseline='middle' text-anchor='middle' font-family='sans-serif' font-weight='800' font-size='26' fill='%23ffffff'%3E🤖 TWERTWO BOT%3C/text%3E%3Ctext x='50%25' y='60%25' dominant-baseline='middle' text-anchor='middle' font-family='sans-serif' font-size='16' fill='%23F472B6'%3EDiscord Assistant &amp; Automation Tool%3C/text%3E%3C/svg%3E"/>
+<span class="absolute top-3 right-3 bg-brand-pink font-mono-code font-bold text-[10px] px-2.5 py-1 rounded-md border border-brand-dark shadow-brutal-sm uppercase text-white">Tools</span>
+</div>
+<div class="text-[11px] font-mono-code font-bold text-rose-600 mb-1">By Akhtar Abdillah &amp; Farrel Reno</div>
+<h3 class="font-display font-black text-xl text-brand-dark mb-2 leading-tight">Twertwo Discord Bot</h3>
+<p class="text-xs text-gray-600 line-clamp-3 leading-relaxed mb-4">
+          Bot otomasi server Discord kelas dengan fitur pengingat tugas, reminder piket harian, dan musik server 24/7.
+        </p>
+<div class="flex flex-wrap gap-1.5 mb-5">
+<span class="text-[10px] font-mono-code font-bold bg-pink-100 border border-brand-dark px-2 py-0.5 rounded">Node.js</span>
+<span class="text-[10px] font-mono-code font-bold bg-indigo-100 border border-brand-dark px-2 py-0.5 rounded">Discord.js</span>
+<span class="text-[10px] font-mono-code font-bold bg-rose-100 border border-brand-dark px-2 py-0.5 rounded">Docker</span>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-2 pt-3 border-t-2 border-gray-100">
+<button class="project-detail-btn py-2 px-3 bg-brand-cyan text-brand-dark font-display font-black text-xs rounded-xl border-2 border-brand-dark shadow-brutal-sm hover:bg-brand-yellow transition-colors cursor-pointer text-center">
+          DETAILS →
+        </button>
+<a class="py-2 px-3 bg-brand-dark text-white font-display font-bold text-xs rounded-xl border-2 border-brand-dark shadow-brutal-sm hover:bg-gray-800 transition-colors flex items-center justify-center gap-1.5" href="https://github.com/smkn64-twertwo/twertwo-discord-bot" rel="noreferrer" target="_blank">
+<svg class="w-3.5 h-3.5 fill-current" viewbox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"></path></svg>
+<span>REPO</span>
+</a>
+</div>
+</article>
+</div>
+</div>
+</section>
+<!-- END: SectionProjectsShowcase --><section class="py-20 bg-brand-yellow border-b-2 border-brand-dark bg-dot-pattern" data-purpose="hall-of-fame" id="achievements">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<!-- Section Header -->
+<div class="text-center max-w-3xl mx-auto mb-16">
+<div class="inline-block px-4 py-1.5 bg-brand-dark text-white border-2 border-brand-dark rounded-lg shadow-brutal-sm font-display font-extrabold text-xs uppercase tracking-widest mb-3">
+          SECTION 05 // HALL OF FAME
+        </div>
+<h2 class="text-4xl sm:text-6xl font-display font-black tracking-tight text-brand-dark uppercase italic">
+          OUR HALL OF FAME
+        </h2>
+<p class="mt-3 text-base sm:text-lg font-bold text-gray-800">
+          Bukti dedikasi, kerja keras, dan karya nyata siswa-siswi Twertwo di kompetisi LKS, Hackathon, dan sertifikasi keahlian.
+        </p>
+</div>
+<!-- Achievement Showcase Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+<!-- Trophy 1 -->
+<div class="bg-white border-3 border-brand-dark rounded-2xl p-6 shadow-brutal flex flex-col justify-between hover:-translate-y-1 transition-transform">
+<div>
+<div class="flex items-center justify-between mb-4">
+<span class="text-3xl">🏆</span>
+<span class="font-mono-code text-xs font-bold bg-amber-200 border border-brand-dark px-2 py-0.5 rounded">JUARA 1</span>
+</div>
+<h3 class="font-display font-black text-xl mb-2 leading-tight">LKS Web Technologies SMK Kota</h3>
+<p class="text-xs text-gray-600 mb-4 font-medium">
+              Representasi SMKN 64 dalam perancangan fullstack platform modern dengan arsitektur REST API dan UI neo-modern.
+            </p>
+</div>
+<div>
+<div class="text-[11px] font-mono-code font-bold text-gray-500 mb-3">Tim: Farhan Akbar &amp; Squad</div>
+<button class="achievement-detail-btn w-full py-2 bg-brand-green border-2 border-brand-dark rounded-xl font-display font-bold text-xs shadow-brutal-sm hover:bg-emerald-300" data-desc="Kompetisi Lomba Keterampilan Siswa (LKS) tingkat wilayah. Siswa Twertwo berhasil menyelesaikan modul Frontend, API integration, dan database management dalam waktu terbatas 6 jam berturut-turut." data-stack="PHP, Laravel, Tailwind CSS, MySQL" data-title="Juara 1 LKS Web Technologies SMK Tingkat Kota" data-year="2024">
+              SHOW DETAILS →
+            </button>
+</div>
+</div>
+<!-- Trophy 2 -->
+<div class="bg-white border-3 border-brand-dark rounded-2xl p-6 shadow-brutal flex flex-col justify-between hover:-translate-y-1 transition-transform">
+<div>
+<div class="flex items-center justify-between mb-4">
+<span class="text-3xl">🥉</span>
+<span class="font-mono-code text-xs font-bold bg-rose-200 border border-brand-dark px-2 py-0.5 rounded">TOP 3</span>
+</div>
+<h3 class="font-display font-black text-xl mb-2 leading-tight">Hackathon Pelajar Nasional</h3>
+<p class="text-xs text-gray-600 mb-4 font-medium">
+              Inovasi aplikasi mobile edukasi inklusif berbasis gamifikasi untuk anak sekolah dasar di wilayah 3T.
+            </p>
+</div>
+<div>
+<div class="text-[11px] font-mono-code font-bold text-gray-500 mb-3">Tim: Twertwo Dev Alpha</div>
+<button class="achievement-detail-btn w-full py-2 bg-brand-cyan border-2 border-brand-dark rounded-xl font-display font-bold text-xs shadow-brutal-sm hover:bg-sky-300" data-desc="Kompetisi coding 48 jam non-stop merancang prototipe mobile app berdaya guna tinggi bernama 'BelajarKuy'. Diikuti oleh lebih dari 120 tim pelajar SMK/SMA se-Indonesia." data-stack="Flutter, Node.js, Express, MongoDB" data-title="Top 3 Hackathon Pelajar Nasional 2024" data-year="2024">
+              SHOW DETAILS →
+            </button>
+</div>
+</div>
+<!-- Trophy 3 -->
+<div class="bg-white border-3 border-brand-dark rounded-2xl p-6 shadow-brutal flex flex-col justify-between hover:-translate-y-1 transition-transform">
+<div>
+<div class="flex items-center justify-between mb-4">
+<span class="text-3xl">🎨</span>
+<span class="font-mono-code text-xs font-bold bg-purple-200 border border-brand-dark px-2 py-0.5 rounded">BEST UI/UX</span>
+</div>
+<h3 class="font-display font-black text-xl mb-2 leading-tight">Vocational Tech Showcase</h3>
+<p class="text-xs text-gray-600 mb-4 font-medium">
+              Penghargaan desain pengalaman antarmuka digital paling intuitif dan berorientasi pada kepuasan pengguna.
+            </p>
+</div>
+<div>
+<div class="text-[11px] font-mono-code font-bold text-gray-500 mb-3">Tim: Anaz Ramadhan &amp; Creative</div>
+<button class="achievement-detail-btn w-full py-2 bg-brand-pink text-white border-2 border-brand-dark rounded-xl font-display font-bold text-xs shadow-brutal-sm hover:bg-rose-400" data-desc="Karya desain platform sekolah digital terintegrasi dengan riset user persona, design system komprehensif di Figma, dan usability testing skor 92/100." data-stack="Figma, Adobe Illustrator, Protopie" data-title="Best UI/UX Award - Vocational Showcase 2024" data-year="2024">
+              SHOW DETAILS →
+            </button>
+</div>
+</div>
+<!-- Trophy 4 -->
+<div class="bg-white border-3 border-brand-dark rounded-2xl p-6 shadow-brutal flex flex-col justify-between hover:-translate-y-1 transition-transform">
+<div>
+<div class="flex items-center justify-between mb-4">
+<span class="text-3xl">📜</span>
+<span class="font-mono-code text-xs font-bold bg-green-200 border border-brand-dark px-2 py-0.5 rounded">100% PASS</span>
+</div>
+<h3 class="font-display font-black text-xl mb-2 leading-tight">Sertifikasi BNSP Junior Web Dev</h3>
+<p class="text-xs text-gray-600 mb-4 font-medium">
+              Seluruh siswa XII RPL 2 sukses tersertifikasi secara nasional oleh Badan Nasional Sertifikasi Profesi (BNSP).
+            </p>
+</div>
+<div>
+<div class="text-[11px] font-mono-code font-bold text-gray-500 mb-3">Batch: Semua Siswa (36 Orang)</div>
+<button class="achievement-detail-btn w-full py-2 bg-brand-peach border-2 border-brand-dark rounded-xl font-display font-bold text-xs shadow-brutal-sm hover:bg-amber-400" data-desc="Uji kompetensi resmi mencakup penguasaan algoritma, pembuatan basis data relasional, pengkodean terstruktur, dan dokumentasi perangkat lunak standar industri." data-stack="Standar Kompetensi Kerja Nasional Indonesia (SKKNI)" data-title="Sertifikasi Kompetensi BNSP Junior Web Developer" data-year="2024 - 2025">
+              SHOW DETAILS →
+            </button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- END: Section5Achievements -->
+<!-- BEGIN: FloatingMusicPlayerWidget -->
+<!-- Neo-Brutalist Music Player in Reference Style (Bottom Left) -->
+<aside class="fixed bottom-5 left-5 z-40 bg-white border-3 border-brand-dark rounded-2xl p-3 shadow-brutal-lg max-w-[280px] w-full flex items-center gap-3 transition-transform" id="music-player-widget">
+<div class="relative w-12 h-12 bg-sky-200 border-2 border-brand-dark rounded-xl flex items-center justify-center shrink-0 shadow-brutal-sm overflow-hidden">
+<!-- Animated Equalizer simulation -->
+<div class="flex items-end gap-1 h-6">
+<span class="w-1 bg-brand-dark rounded-full h-3 animate-bounce"></span>
+<span class="w-1 bg-brand-dark rounded-full h-5 animate-pulse"></span>
+<span class="w-1 bg-brand-dark rounded-full h-4 animate-bounce" style="animation-delay: 0.2s"></span>
+</div>
+<span class="absolute -bottom-1 -right-1 text-[9px] font-mono-code font-bold bg-brand-yellow px-1 border border-brand-dark">♪</span>
+</div>
+<div class="flex-1 min-w-0">
+<h4 class="font-display font-black text-xs tracking-tight truncate text-brand-dark uppercase" id="track-title">TUJUH BELAS</h4>
+<p class="text-[11px] text-gray-500 font-bold font-mono-code truncate">TULUS</p>
+<!-- Player Controls -->
+<div class="flex items-center gap-3 mt-1">
+<button class="text-brand-dark hover:scale-110 transition-transform" id="btn-prev" title="Previous Track">
+<svg class="w-3.5 h-3.5 fill-current" viewbox="0 0 24 24"><path d="M6 6h2v12H6zm3.5 6l8.5 6V6z"></path></svg>
+</button>
+<button class="w-6 h-6 rounded-full bg-rose-500 border border-brand-dark text-white flex items-center justify-center shadow-brutal-sm hover:scale-110 transition-transform" id="btn-play-pause" title="Play/Pause">
+<svg class="w-3 h-3 fill-current ml-0.5" id="icon-play" viewbox="0 0 24 24"><path d="M8 5v14l11-7z"></path></svg>
+</button>
+<button class="text-brand-dark hover:scale-110 transition-transform" id="btn-next" title="Next Track">
+<svg class="w-3.5 h-3.5 fill-current" viewbox="0 0 24 24"><path d="M6 18l8.5-6L6 6v12zM16 6v12h2V6h-2z"></path></svg>
+</button>
+</div>
+</div>
+<button class="text-xs text-gray-400 hover:text-black self-start" id="minimize-player" title="Close/Minimize">✕</button>
+</aside>
+<!-- END: FloatingMusicPlayerWidget -->
+<!-- BEGIN: InteractiveStudentModal -->
+<!-- Recreating the Exact Modal from IMAGE_1 reference -->
+<div class="fixed inset-0 z-50 hidden modal-backdrop flex items-center justify-center p-4" id="student-modal">
+<div class="relative w-full max-w-md bg-white border-3 border-brand-dark rounded-3xl overflow-hidden shadow-brutal-xl animate-in fade-in zoom-in duration-200">
+<!-- Modal Header Banner / Photo Container -->
+<div class="relative bg-brand-dark p-6 pb-2 flex flex-col items-center">
+<!-- Instagram Top Left Pill -->
+<a class="absolute top-4 left-4 w-9 h-9 rounded-full bg-rose-400 border-2 border-brand-dark flex items-center justify-center shadow-brutal-sm hover:scale-110 transition-transform" href="#" id="modal-ig-link" target="_blank" title="Visit Instagram">
+<svg class="w-5 h-5 text-black" fill="currentColor" viewbox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"></path></svg>
+</a>
+<!-- Red Close Button Top Right -->
+<button class="absolute top-4 right-4 w-9 h-9 rounded-full bg-rose-500 border-2 border-brand-dark flex items-center justify-center text-white font-black shadow-brutal-sm hover:scale-110 transition-transform" id="close-modal-btn">
+          ✕
+        </button>
+<!-- Student Photo inside Modal -->
+<div class="w-44 h-48 sm:w-52 sm:h-56 rounded-xl border-2 border-white overflow-hidden shadow-brutal bg-gray-200 mt-2">
+<img alt="Student Profile" class="w-full h-full object-cover" id="modal-student-img" src=""/>
+</div>
+</div>
+<!-- Modal Body Content -->
+<div class="p-6 bg-white flex flex-col items-center text-center">
+<!-- Student Full Name in Bold Display Typography -->
+<h3 class="font-display font-black text-2xl sm:text-3xl text-brand-dark uppercase tracking-tight" id="modal-student-name">
+          FARHAN AKBAR F.
+        </h3>
+<p class="text-xs font-mono-code font-bold text-gray-500 mt-1" id="modal-student-role">Fullstack Explorer • XII RPL 2</p>
+<!-- Quote Box with [QUOTE] Pill Label exactly like IMAGE_1 -->
+<div class="mt-6 w-full relative bg-white border-2 border-brand-dark rounded-2xl p-5 pt-6 shadow-brutal-sm text-center">
+<span class="absolute -top-3 left-4 bg-brand-dark text-white font-mono-code text-[11px] font-bold px-2 py-0.5 rounded">
+            QUOTE
+          </span>
+<p class="font-body text-sm sm:text-base italic font-semibold text-gray-800" id="modal-student-quote">
+            "Belajar dari kesalahan adalah kunci untuk menjadi lebih baik."
+          </p>
+</div>
+<!-- Birthday Tag -->
+<div class="mt-5">
+<span class="font-mono-code text-xs font-bold uppercase tracking-wider text-gray-400">
+            BORN ON <span class="text-gray-700" id="modal-student-born">10 MEI 2000</span>
+</span>
+</div>
+</div>
+</div>
+</div>
+<!-- END: InteractiveStudentModal -->
+<!-- BEGIN: AchievementDetailModal -->
+<!-- BEGIN: InteractiveProjectModal -->
+<div class="fixed inset-0 z-50 hidden modal-backdrop flex items-center justify-center p-4" id="project-modal">
+<div class="relative w-full max-w-2xl bg-white border-3 border-brand-dark rounded-3xl overflow-hidden shadow-brutal-xl animate-in fade-in zoom-in duration-200">
+<!-- Header Banner / Image Preview -->
+<div class="relative bg-brand-dark p-4 sm:p-6 pb-2 flex flex-col items-center">
+<button class="absolute top-4 right-4 w-9 h-9 rounded-full bg-rose-500 border-2 border-brand-dark flex items-center justify-center text-white font-black shadow-brutal-sm hover:scale-110 transition-transform cursor-pointer" id="close-project-modal-btn">
+      ✕
+    </button>
+<div class="w-full aspect-video rounded-2xl border-2 border-white overflow-hidden shadow-brutal bg-gray-100 mt-2">
+<img alt="Project Detailed Preview" class="w-full h-full object-cover" id="modal-project-img" src=""/>
+</div>
+</div>
+<!-- Body -->
+<div class="p-6 sm:p-8 bg-white flex flex-col text-left">
+<div class="flex items-center justify-between mb-2">
+<span class="font-mono-code text-xs font-bold text-purple-600 uppercase" id="modal-project-team">Twertwo Dev Team</span>
+<span class="font-mono-code text-xs font-bold bg-brand-yellow px-2 py-0.5 rounded border border-brand-dark" id="modal-project-tech">Tech Stack</span>
+</div>
+<h3 class="font-display font-black text-2xl sm:text-3xl text-brand-dark tracking-tight mb-3" id="modal-project-title">
+      Project Title
+    </h3>
+<p class="font-body text-sm sm:text-base text-gray-700 leading-relaxed mb-4" id="modal-project-desc">
+      Description goes here...
+    </p>
+<!-- Features Highlight -->
+<div class="bg-brand-cream border-2 border-brand-dark rounded-2xl p-4 mb-6">
+<h5 class="font-display font-bold text-xs uppercase tracking-wider text-brand-dark mb-2">Key Features:</h5>
+<p class="font-mono-code text-xs text-gray-800 leading-relaxed" id="modal-project-features">
+        Features list...
+      </p>
+</div>
+<!-- Actions -->
+<div class="flex flex-col sm:flex-row gap-3">
+<a class="flex-1 py-3 px-4 bg-brand-dark text-white font-display font-bold text-sm rounded-xl border-2 border-brand-dark shadow-brutal hover:bg-gray-800 transition-colors flex items-center justify-center gap-2 text-center" href="#" id="modal-project-github" rel="noreferrer" target="_blank">
+<svg class="w-4 h-4 fill-current" viewbox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"></path></svg>
+<span>OPEN IN GITHUB</span>
+</a>
+<button class="py-3 px-6 bg-brand-cream border-2 border-brand-dark rounded-xl font-display font-bold text-sm shadow-brutal-sm hover:bg-gray-100 transition-colors cursor-pointer text-center" id="close-project-modal-btn-alt">
+        TUTUP
+      </button>
+</div>
+</div>
+</div>
+</div>
+<!-- END: InteractiveProjectModal --><div class="fixed inset-0 z-50 hidden modal-backdrop flex items-center justify-center p-4" id="achievement-modal">
+<div class="relative w-full max-w-lg bg-white border-3 border-brand-dark rounded-3xl p-6 sm:p-8 shadow-brutal-xl">
+<button class="absolute top-4 right-4 w-9 h-9 rounded-full bg-rose-500 border-2 border-brand-dark flex items-center justify-center text-white font-black shadow-brutal-sm hover:scale-110 transition-transform" id="close-achievement-modal-btn">
+        ✕
+      </button>
+<div class="inline-block px-3 py-1 bg-brand-yellow border-2 border-brand-dark rounded-lg text-xs font-mono-code font-bold uppercase mb-4">
+        PROJECT &amp; MILESTONE DETAILS
+      </div>
+<h3 class="font-display font-black text-2xl text-brand-dark mb-3" id="achieve-modal-title">
+        LKS Web Technologies
+      </h3>
+<p class="text-sm text-gray-700 leading-relaxed font-medium mb-6" id="achieve-modal-desc">
+        Description content goes here.
+      </p>
+<div class="space-y-3 border-t-2 border-gray-100 pt-4 font-mono-code text-xs">
+<div>
+<span class="font-bold text-gray-500">Tech Stack:</span>
+<p class="font-bold text-brand-dark mt-0.5 bg-gray-100 p-2 rounded border border-gray-300" id="achieve-modal-stack">PHP, MySQL</p>
+</div>
+<div>
+<span class="font-bold text-gray-500">Period / Batch:</span>
+<span class="block font-bold text-brand-dark" id="achieve-modal-year">2024</span>
+</div>
+</div>
+<button class="mt-6 w-full py-3 bg-brand-dark text-white font-display font-bold text-sm rounded-xl border-2 border-brand-dark shadow-brutal hover:bg-gray-800 transition-colors" id="close-achievement-confirm-btn">
+        TUTUP INFORMASI
+      </button>
+</div>
+</div>
+<!-- END: AchievementDetailModal -->
+<!-- BEGIN: MainFooter -->
+<footer class="bg-brand-dark text-white border-t-2 border-brand-dark py-12" data-purpose="site-footer">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-6">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 bg-brand-yellow text-brand-dark font-display font-black text-xl rounded-xl border-2 border-white flex items-center justify-center">
+          T2
+        </div>
+<div>
+<h4 class="font-display font-black text-lg">TWERTWO • XII RPL 2</h4>
+<p class="text-xs text-gray-400 font-mono-code">Rekayasa Perangkat Lunak SMKN 64 JAKARTA</p>
+</div>
+</div>
+<div class="text-center md:text-right">
+<p class="text-xs sm:text-sm text-gray-300 font-medium">
+          Made with passion, coffee &amp; code by <span class="text-brand-yellow font-bold">Twertwo Class 2024/2025</span>.
+        </p>
+<p class="text-[11px] text-gray-500 font-mono-code mt-1">
+          © 2025 SMKN 64 Jakarta. All rights reserved.
+        </p>
+</div>
+</div>
+</footer>
+<!-- END: MainFooter -->
+<!-- BEGIN: VanillaJSScriptHandlers -->
+<script data-purpose="student-modal-logic">
+    document.addEventListener('DOMContentLoaded', () => {
+      // 1. Student Detail Modal Elements
+      const studentModal = document.getElementById('student-modal');
+      const studentCards = document.querySelectorAll('.student-card');
+      const closeModalBtn = document.getElementById('close-modal-btn');
+      
+      const modalStudentImg = document.getElementById('modal-student-img');
+      const modalStudentName = document.getElementById('modal-student-name');
+      const modalStudentRole = document.getElementById('modal-student-role');
+      const modalStudentQuote = document.getElementById('modal-student-quote');
+      const modalStudentBorn = document.getElementById('modal-student-born');
+      const modalIgLink = document.getElementById('modal-ig-link');
+
+      // Open Modal on Card Click
+      studentCards.forEach(card => {
+        card.addEventListener('click', () => {
+          const name = card.getAttribute('data-name');
+          const role = card.getAttribute('data-role');
+          const quote = card.getAttribute('data-quote');
+          const born = card.getAttribute('data-born');
+          const ig = card.getAttribute('data-ig');
+          const avatar = card.getAttribute('data-avatar');
+
+          modalStudentName.textContent = name;
+          modalStudentRole.textContent = `${role} • XII RPL 2`;
+          modalStudentQuote.textContent = `"${quote}"`;
+          modalStudentBorn.textContent = born;
+          modalStudentImg.src = avatar;
+          modalStudentImg.alt = name;
+          modalIgLink.href = `https://instagram.com/${ig.replace('@', '')}`;
+
+          studentModal.classList.remove('hidden');
+          document.body.style.overflow = 'hidden';
+        });
+      });
+
+      // Close Student Modal
+      const closeStudentModal = () => {
+        studentModal.classList.add('hidden');
+        document.body.style.overflow = '';
+      };
+
+      if (closeModalBtn) closeModalBtn.addEventListener('click', closeStudentModal);
+      studentModal.addEventListener('click', (e) => {
+        if (e.target === studentModal) closeStudentModal();
+      });
+
+      // 2. Student Filter Tabs Logic
+      const filterBtns = document.querySelectorAll('.filter-btn');
+      filterBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+          filterBtns.forEach(b => {
+            b.classList.remove('bg-brand-dark', 'text-white');
+            b.classList.add('bg-brand-cream', 'text-brand-dark');
+          });
+          btn.classList.add('bg-brand-dark', 'text-white');
+          btn.classList.remove('bg-brand-cream');
+
+          const category = btn.getAttribute('data-filter');
+          studentCards.forEach(card => {
+            if (category === 'all' || card.getAttribute('data-category') === category) {
+              card.style.display = 'block';
+            } else {
+              card.style.display = 'none';
+            }
+          });
+        });
+      });
+
+      // 3. Achievement Detail Modal Logic
+      const achieveModal = document.getElementById('achievement-modal');
+      const achieveBtns = document.querySelectorAll('.achievement-detail-btn');
+      const closeAchieveBtn = document.getElementById('close-achievement-modal-btn');
+      const closeAchieveConfirmBtn = document.getElementById('close-achievement-confirm-btn');
+      
+      const achieveTitle = document.getElementById('achieve-modal-title');
+      const achieveDesc = document.getElementById('achieve-modal-desc');
+      const achieveStack = document.getElementById('achieve-modal-stack');
+      const achieveYear = document.getElementById('achieve-modal-year');
+
+      achieveBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+          achieveTitle.textContent = btn.getAttribute('data-title');
+          achieveDesc.textContent = btn.getAttribute('data-desc');
+          achieveStack.textContent = btn.getAttribute('data-stack');
+          achieveYear.textContent = btn.getAttribute('data-year');
+
+          achieveModal.classList.remove('hidden');
+          document.body.style.overflow = 'hidden';
+        });
+      });
+
+      const closeAchievementModal = () => {
+        achieveModal.classList.add('hidden');
+        document.body.style.overflow = '';
+      };
+
+      if (closeAchieveBtn) closeAchieveBtn.addEventListener('click', closeAchievementModal);
+      if (closeAchieveConfirmBtn) closeAchieveConfirmBtn.addEventListener('click', closeAchievementModal);
+      achieveModal.addEventListener('click', (e) => {
+        if (e.target === achieveModal) closeAchievementModal();
+      });
+
+      // Global ESC Key Close
+      window.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') {
+          closeStudentModal();
+          closeAchievementModal();
+        }
+      });
+    });
+  </script>
+<script data-purpose="music-player-logic">
+    document.addEventListener('DOMContentLoaded', () => {
+      const btnPlayPause = document.getElementById('btn-play-pause');
+      const trackTitle = document.getElementById('track-title');
+      const minimizeBtn = document.getElementById('minimize-player');
+      const playerWidget = document.getElementById('music-player-widget');
+      
+      let isPlaying = false;
+      const playlist = [
+        { title: "TUJUH BELAS", artist: "TULUS" },
+        { title: "KITA BIKIN ROMANTIS", artist: "MALIQ & D'ESSENTIALS" },
+        { title: "MONOKROM", artist: "TULUS" }
+      ];
+      let currentTrackIndex = 0;
+
+      btnPlayPause.addEventListener('click', () => {
+        isPlaying = !isPlaying;
+        if (isPlaying) {
+          btnPlayPause.innerHTML = `<svg class="w-3 h-3 fill-current" viewBox="0 0 24 24"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>`;
+        } else {
+          btnPlayPause.innerHTML = `<svg class="w-3 h-3 fill-current ml-0.5" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>`;
+        }
+      });
+
+      document.getElementById('btn-next').addEventListener('click', () => {
+        currentTrackIndex = (currentTrackIndex + 1) % playlist.length;
+        trackTitle.textContent = playlist[currentTrackIndex].title;
+      });
+
+      document.getElementById('btn-prev').addEventListener('click', () => {
+        currentTrackIndex = (currentTrackIndex - 1 + playlist.length) % playlist.length;
+        trackTitle.textContent = playlist[currentTrackIndex].title;
+      });
+
+      minimizeBtn.addEventListener('click', () => {
+        playerWidget.classList.add('translate-y-28', 'opacity-0');
+        setTimeout(() => {
+          playerWidget.classList.remove('translate-y-28', 'opacity-0');
+        }, 4000); // Re-appear hint after 4s
+      });
+    });
+  </script>
+<!-- END: VanillaJSScriptHandlers -->
+</body></html>
