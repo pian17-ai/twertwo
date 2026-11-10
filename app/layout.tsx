@@ -24,6 +24,7 @@ export default function RootLayout({
   return (
     <html lang="id" className="scroll-smooth">
       <body className="selection:bg-brand-yellow selection:text-black antialiased relative min-h-screen">
+        <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
         {children}
       </body>
     </html>
