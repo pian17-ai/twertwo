@@ -63,12 +63,9 @@ export interface Student {
   name: string;
   classGrade: string;
   role: string;
-  category: "frontend" | "backend" | "mobile" | "creative" | string;
-  categoryLabel: string;
-  categoryBadgeBg: string;
   quote: string;
   born: string;
-  instagram: string;
+  github: string;
   avatar: string;
 }
 
@@ -133,10 +130,6 @@ export interface PortfolioData {
     }[];
   };
   students: Student[];
-  studentCategories: {
-    id: string;
-    label: string;
-  }[];
   projects: Project[];
   projectCategories: {
     id: string;

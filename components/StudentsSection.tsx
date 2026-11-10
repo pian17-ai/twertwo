@@ -1,33 +1,22 @@
 "use client";
 
-import React, { useState, useMemo } from "react";
+import React, { useState } from "react";
 import { Student } from "@/types/portfolio";
 import { StudentModal } from "./modals/StudentModal";
 
 interface StudentsSectionProps {
   students: Student[];
-  categories: { id: string; label: string }[];
 }
 
-export const StudentsSection: React.FC<StudentsSectionProps> = ({
-  students,
-  categories,
-}) => {
-  const [selectedCategory, setSelectedCategory] = useState<string>("all");
+export const StudentsSection: React.FC<StudentsSectionProps> = ({ students }) => {
   const [searchQuery, setSearchQuery] = useState<string>("");
   const [selectedStudent, setSelectedStudent] = useState<Student | null>(null);
 
-  const filteredStudents = useMemo(() => {
-    return students.filter((student) => {
-      const matchesCategory =
-        selectedCategory === "all" || student.category === selectedCategory;
-      const matchesSearch =
-        student.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
-        student.role.toLowerCase().includes(searchQuery.toLowerCase()) ||
-        student.quote.toLowerCase().includes(searchQuery.toLowerCase());
-      return matchesCategory && matchesSearch;
-    });
-  }, [students, selectedCategory, searchQuery]);
+  const filteredStudents = students.filter((student) =>
+    student.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
+    student.role.toLowerCase().includes(searchQuery.toLowerCase()) ||
+    student.quote.toLowerCase().includes(searchQuery.toLowerCase())
+  );
 
   return (
     <section
@@ -45,12 +34,12 @@ export const StudentsSection: React.FC<StudentsSectionProps> = ({
             Meet the Twertwo Squad
           </h2>
           <p className="mt-3 text-gray-600 font-medium max-w-xl">
-            Klik salah satu kartu siswa di bawah untuk melihat kutipan personal, role keahlian, dan profil media sosial!
+            Klik salah satu kartu siswa di bawah untuk melihat kutipan personal, role keahlian, dan profil GitHub!
           </p>
         </div>
 
-        {/* Search & Filter Toolbar */}
-        <div className="max-w-2xl mx-auto mb-8">
+        {/* Search Toolbar */}
+        <div className="max-w-2xl mx-auto mb-12">
           <div className="relative">
             <input
               type="text"
@@ -83,35 +72,7 @@ export const StudentsSection: React.FC<StudentsSectionProps> = ({
           </div>
         </div>
 
-        {/* Filter Tabs */}
-        <div
-          className="flex flex-wrap items-center justify-center gap-2 mb-12"
-          id="filter-container"
-        >
-          {categories.map((cat) => {
-            const count =
-              cat.id === "all"
-                ? students.length
-                : students.filter((s) => s.category === cat.id).length;
-            const isActive = selectedCategory === cat.id;
-
-            return (
-              <button
-                key={cat.id}
-                onClick={() => setSelectedCategory(cat.id)}
-                className={`filter-btn px-4 py-2 font-display font-bold text-xs uppercase rounded-lg border-2 border-brand-dark shadow-brutal-sm transition-all cursor-pointer ${
-                  isActive
-                    ? "bg-brand-dark text-white"
-                    : "bg-brand-cream hover:bg-brand-yellow text-brand-dark"
-                }`}
-              >
-                {cat.label} ({count})
-              </button>
-            );
-          })}
-        </div>
-
-        {/* Students Neo-brutalist Grid */}
+        {/* Students Grid */}
         {filteredStudents.length === 0 ? (
           <div className="text-center py-12 bg-brand-cream border-2 border-dashed border-brand-dark rounded-2xl p-8 max-w-md mx-auto">
             <span className="text-4xl">🔍</span>
@@ -119,7 +80,7 @@ export const StudentsSection: React.FC<StudentsSectionProps> = ({
               Tidak ada siswa yang ditemukan
             </p>
             <p className="text-xs text-gray-500 mt-1">
-              Coba gunakan kata kunci pencarian lain atau pilih kategori &quot;All Students&quot;.
+              Coba gunakan kata kunci pencarian lain.
             </p>
           </div>
         ) : (
@@ -134,7 +95,7 @@ export const StudentsSection: React.FC<StudentsSectionProps> = ({
                 className="student-card group bg-white border-3 border-brand-dark rounded-2xl p-4 shadow-brutal hover:-translate-y-1.5 transition-all cursor-pointer flex flex-col justify-between"
               >
                 <div>
-                  <div className="aspect-square w-full rounded-xl border-2 border-brand-dark overflow-hidden mb-3 bg-rose-100 relative">
+                  <div className="aspect-square w-full rounded-xl border-2 border-brand-dark overflow-hidden mb-3 bg-rose-100">
                     {/* eslint-disable-next-line @next/next/no-img-element */}
                     <img
                       alt={student.name}
@@ -142,11 +103,6 @@ export const StudentsSection: React.FC<StudentsSectionProps> = ({
                       src={student.avatar}
                       loading="lazy"
                     />
-                    <span
-                      className={`absolute top-2 right-2 ${student.categoryBadgeBg} font-mono-code font-bold text-[10px] px-2 py-0.5 rounded border border-brand-dark shadow-brutal-sm`}
-                    >
-                      {student.categoryLabel}
-                    </span>
                   </div>
 
                   <h3 className="font-display font-black text-center text-lg text-brand-dark tracking-tight line-clamp-1">

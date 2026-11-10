@@ -1,4 +1,8 @@
-import { portfolioData } from "@/data/portfolioData";
+import { classInfo, navItems, curriculumPillars, classManifestCode } from "@/data/classInfo";
+import { students } from "@/data/students";
+import { projects, projectCategories } from "@/data/projects";
+import { achievements } from "@/data/achievements";
+import { footer, playlist } from "@/data/footer";
 import { Navbar } from "@/components/Navbar";
 import { Hero } from "@/components/Hero";
 import { AboutRPL } from "@/components/AboutRPL";
@@ -10,20 +14,6 @@ import { Footer } from "@/components/Footer";
 import { MusicPlayer } from "@/components/MusicPlayer";
 
 export default function Home() {
-  const {
-    classInfo,
-    navItems,
-    curriculumPillars,
-    classManifestCode,
-    students,
-    studentCategories,
-    projects,
-    projectCategories,
-    achievements,
-    playlist,
-    footer,
-  } = portfolioData;
-
   return (
     <div className="flex flex-col min-h-screen bg-[#FAF7F2] text-[#121212]">
       {/* Top Navigation Bar with Mobile Drawer */}
@@ -43,11 +33,8 @@ export default function Home() {
         {/* Section 3: About Twertwo (Class Identity) */}
         <AboutTwertwo classInfo={classInfo} />
 
-        {/* Section 4: Students Roster (Interactive & Filterable) */}
-        <StudentsSection
-          students={students}
-          categories={studentCategories}
-        />
+        {/* Section 4: Students Roster */}
+        <StudentsSection students={students} />
 
         {/* Section 5: Featured Projects Showcase */}
         <ProjectsSection
